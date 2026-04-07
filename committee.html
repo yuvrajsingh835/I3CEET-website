@@ -149,6 +149,26 @@
             color: var(--accent);
             font-weight: bold;
         }
+
+        /* Specific Matrix of 5 Columns */
+        @media (min-width: 1024px) {
+            .organizing-grid {
+                grid-template-columns: repeat(5, 1fr) !important;
+                gap: 1.25rem !important;
+            }
+            .organizing-grid .member-card {
+                padding: 1.5rem 1rem !important;
+            }
+            .organizing-grid .member-name {
+                font-size: 1rem !important;
+            }
+        }
+        
+        @media (max-width: 1024px) and (min-width: 768px) {
+            .organizing-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
     </style>
 
     <!-- Scripts -->
@@ -201,7 +221,7 @@
 
         <!-- Organizing Chair -->
         <div class="category-container">
-            <h2 class="section-title">CONVENIR & ORGANIZING CHAIR</h2>
+            <h2 class="section-title">CONVENER & ORGANIZING CHAIR</h2>
             <div class="member-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                 <div class="member-card">
                     <div class="member-img-wrapper"><img src="images/organizing/Dr.-Amrita-Rai.png" alt="Dr. Amrita Rai"></div>
@@ -221,36 +241,76 @@
         <!-- Organizing Team -->
         <div class="category-container">
             <h2 class="section-title">ORGANIZING TEAM</h2>
-            <div class="member-grid">
+            <div class="member-grid organizing-grid">
                 <div class="member-card">
-                    <div class="member-img-wrapper"><img src="images/organizing/Dr-Monika-Bhatnagar_ECE.jpeg" alt="Dr. Monika Bhatnagar"></div>
-                    <div class="member-name">Dr. Monika Bhatnagar</div>
-                    <div class="member-org">Assoc. Prof. Department of EC, GCET</div>
-                </div>
-                <div class="member-card">
-                    <div class="member-img-wrapper"><img src="images/organizing/Jaspreet-Kaur.jpg" alt="Dr. Jaspreet Kaur"></div>
-                    <div class="member-name">Dr. Jaspreet Kaur</div>
-                    <div class="member-org">Professor, Department of EC, GCET</div>
-                </div>
-                <div class="member-card">
-                    <div class="member-img-wrapper"><img src="images/organizing/Anil-Kumar-Sethi.jpg" alt="Dr. A.K. Sethi"></div>
-                    <div class="member-name">Dr. A.K. Sethi</div>
-                    <div class="member-org">Professor, Department of ME, GCET</div>
-                </div>
-                <div class="member-card">
-                    <div class="member-img-wrapper"><img src="images/organizing/DR-SHILPEE_ECE.jpg" alt="Dr. Shilpee Patil"></div>
-                    <div class="member-name">Dr. Shilpee Patil</div>
-                    <div class="member-org">Assoc. Prof. Department of EC, GCET</div>
-                </div>
-                <div class="member-card">
-                    <div class="member-img-wrapper"><img src="images/organizing/Mr. Amanpreet Singh Saini.webp" alt="Mr. Amanpreet Singh Saini"></div>
+                    <div class="member-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: #f8fafc;">
+                        <i class="fa fa-user-tie" style="font-size: 4rem; color: var(--accent); opacity: 0.3;"></i>
+                    </div>
                     <div class="member-name">Mr. Amanpreet Singh Saini</div>
-                    <div class="member-org">Asst. Prof. Department of EC, GCET</div>
+                    <div class="member-org">GCET Greater Noida</div>
                 </div>
                 <div class="member-card">
-                    <div class="member-img-wrapper"><img src="images/organizing/Alok-Kumar_ECE.jpg" alt="Mr. Alok Kumar"></div>
+                    <div class="member-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: #f8fafc;">
+                        <i class="fa fa-user-graduate" style="font-size: 4rem; color: var(--accent); opacity: 0.3;"></i>
+                    </div>
+                    <div class="member-name">Dr. Anil Kumar Sethi</div>
+                    <div class="member-org">GCET Greater Noida</div>
+                </div>
+                <div class="member-card">
+                    <div class="member-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: #f8fafc;">
+                        <i class="fa fa-user-graduate" style="font-size: 4rem; color: var(--accent); opacity: 0.3;"></i>
+                    </div>
+                    <div class="member-name">Dr. Shilpee Patil</div>
+                    <div class="member-org">GCET Greater Noida</div>
+                </div>
+                <div class="member-card">
+                    <div class="member-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: #f8fafc;">
+                        <i class="fa fa-user-tie" style="font-size: 4rem; color: var(--accent); opacity: 0.3;"></i>
+                    </div>
                     <div class="member-name">Mr. Alok Kumar</div>
-                    <div class="member-org">Asst. Prof. Department of EC, GCET</div>
+                    <div class="member-org">GCET Greater Noida</div>
+                </div>
+                <div class="member-card">
+                    <div class="member-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: #f8fafc;">
+                        <i class="fa fa-user-graduate" style="font-size: 4rem; color: var(--accent); opacity: 0.3;"></i>
+                    </div>
+                    <div class="member-name">Dr. Sachin Kumar</div>
+                    <div class="member-org">GCET Greater Noida</div>
+                </div>
+                <div class="member-card">
+                    <div class="member-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: #f8fafc;">
+                        <i class="fa fa-user-graduate" style="font-size: 4rem; color: var(--accent); opacity: 0.3;"></i>
+                    </div>
+                    <div class="member-name">Dr. Maksud Alam</div>
+                    <div class="member-org">GCET Greater Noida</div>
+                </div>
+                <div class="member-card">
+                    <div class="member-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: #f8fafc;">
+                        <i class="fa fa-user-graduate" style="font-size: 4rem; color: var(--accent); opacity: 0.3;"></i>
+                    </div>
+                    <div class="member-name">Dr. Arun Rana</div>
+                    <div class="member-org">GCET Greater Noida</div>
+                </div>
+                <div class="member-card">
+                    <div class="member-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: #f8fafc;">
+                        <i class="fa fa-user-tie" style="font-size: 4rem; color: var(--accent); opacity: 0.3;"></i>
+                    </div>
+                    <div class="member-name">Mr. Parveen Singh Rathore</div>
+                    <div class="member-org">GCET Greater Noida</div>
+                </div>
+                <div class="member-card">
+                    <div class="member-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: #f8fafc;">
+                        <i class="fa fa-user-graduate" style="font-size: 4rem; color: var(--accent); opacity: 0.3;"></i>
+                    </div>
+                    <div class="member-name">Dr. Akhilesh Panchal</div>
+                    <div class="member-org">GCET Greater Noida</div>
+                </div>
+                <div class="member-card">
+                    <div class="member-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: #f8fafc;">
+                        <i class="fa fa-user-nurse" style="font-size: 4rem; color: var(--accent); opacity: 0.3;"></i>
+                    </div>
+                    <div class="member-name">Ms. Ravinder Kaur</div>
+                    <div class="member-org">GCET Greater Noida</div>
                 </div>
             </div>
         </div>
