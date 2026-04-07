@@ -1,55 +1,55 @@
 {
-	"meta":{
-		"conferenceYear": 2026,
-		"dateStart": "2026-09-30",
-		"dateEnd": "2026-10-01",
-		"conferenceName": "I3CSET-2026"
+	"meta": {
+		"conferenceYear": 2027,
+		"dateStart": "2027-04-29",
+		"dateEnd": "2027-04-30",
+		"conferenceName": "I3CEET-2027"
 	},
-	"header":{
-		"title" : "I3CSET-2026",
-		"subtitle" : "2nd International Conference on Computing, Communication and Sustainable Energy Technologies (I3CSET-2026)",
-		"dateTitle" : "30 September – 01 October 2026",
+	"header": {
+		"title": "I3CEET-2027",
+		"subtitle": "2nd International Conference on Computing, Communication and Energy Efficiency Technologies (I3CEET-2027)",
+		"dateTitle": "29–30 April 2027",
 		"locationPlaceName": "Galgotias College of Engineering and Technology",
 		"locationAreaName": "Greater Noida, India",
-		"bannerImage":"images/hotel1-banner.jpg",
-		"bannerTopPlacement" : "-310px",
-		"bannerRightPlacement" : "-640px"
+		"bannerImage": "images/hotel1-banner.jpg",
+		"bannerTopPlacement": "-310px",
+		"bannerRightPlacement": "-640px"
 	},
-	"socialMediaLinks":{
-		"facebook":"#",
-		"twitter":"#"
+	"socialMediaLinks": {
+		"facebook": "#",
+		"twitter": "#"
 	},
-	"dates":[
+	"dates": [
 		{
-			"title":"Submission Deadline",
-			"date": "April 30, 2026",
+			"title": "Abstract Submission",
+			"date": "August 22, 2026",
 			"showInNavBar": true
 		},
 		{
-			"title":"Acceptance Alert",
-			"date": "May 15, 2026",
+			"title": "Full Paper Submission",
+			"date": "October 03, 2026",
 			"showInNavBar": true
 		},
 		{
-			"title":"Registration Closes",
-			"date": "May 30, 2026",
+			"title": "Notification of Acceptance",
+			"date": "December 01, 2026",
 			"showInNavBar": true
 		},
 		{
-			"title":"Final Submission",
-			"date": "TBA",
+			"title": "Final Paper Submission",
+			"date": "February 28, 2026",
 			"showInNavBar": true
 		},
 		{
-			"title":"I3CSET-2026 Conference Dates",
-			"date": "30 September – 01 October 2026",
+			"title": "I3CEET-2027 Conference Dates",
+			"date": "29–30 April 2027",
 			"showInNavBar": false
 		}
 	],
-	"footerLinks":{
-		"firstSection":{
-			"title":"conference",
-			"links":[
+	"footerLinks": {
+		"firstSection": {
+			"title": "conference",
+			"links": [
 				{
 					"name": "Technical Program",
 					"link": "technical-program.html",
@@ -60,7 +60,6 @@
 					"link": "plenary-speakers.html",
 					"openInNewWindow": false
 				},
-
 				{
 					"name": "Social Events ",
 					"link": "events.html",
@@ -73,9 +72,9 @@
 				}
 			]
 		},
-		"secondSection":{
-			"title":"destination",
-			"links":[
+		"secondSection": {
+			"title": "destination",
+			"links": [
 				{
 					"name": "Local Information",
 					"link": "local-information.html",
@@ -88,9 +87,9 @@
 				}
 			]
 		},
-		"thirdSection":{
-			"title":"author links",
-			"links":[
+		"thirdSection": {
+			"title": "author links",
+			"links": [
 				{
 					"name": "Article Templates",
 					"link": "http://css.paperplaza.net/conferences/support/support.php",
@@ -108,9 +107,9 @@
 				}
 			]
 		},
-		"fourthSection":{
-			"title":"sitemap",
-			"links":[
+		"fourthSection": {
+			"title": "sitemap",
+			"links": [
 				{
 					"name": "Home",
 					"link": "index.html",
@@ -134,12 +133,11 @@
 			]
 		}
 	},
-	"newsTicker":[
+	"newsTicker": [
 		{
-			"content":"Conference registration is now OPEN!!  Click here.",
-			"link":"registration.html",
+			"content": "Conference registration is now OPEN!!  Click here.",
+			"link": "registration.html",
 			"openInNewWindow": false
 		}
-
 	]
 }

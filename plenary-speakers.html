@@ -4,25 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dignitaries & Speakers | I3CSET-2026</title>
+    <title>Dignitaries & Speakers | I3CEET-2027</title>
 
     <!-- Meta SEO -->
-    <meta name="keywords" content="I3CSET-2026, Dignitaries, Plenary Speakers, Keynotes, Experts, Computing, Communication, Energy Technologies">
-    <meta name="description" content="Meet the esteemed dignitaries and plenary speakers for I3CSET-2026 conference.">
+    <meta name="keywords" content="I3CEET-2027, Dignitaries, Plenary Speakers, Keynotes, Experts, Computing, Communication, Energy Technologies">
+    <meta name="description" content="Meet the esteemed dignitaries and plenary speakers for I3CEET-2027 conference.">
 
-    <script>
-        if (localStorage.getItem('theme') === 'light') {
-            document.documentElement.classList.add('light-mode');
-            document.addEventListener('DOMContentLoaded', () => document.body.classList.add('light-mode'));
-        }
-    </script>
-    <script src="js/ticker-data.js" defer></script>
-    <script src="js/footer-data.js" defer></script>
-    <script src="js/dates-data.js" defer></script>
-    <script src="js/nav-data.js" defer></script>
-    <script src="js/modern.js" defer></script>
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
@@ -30,186 +19,150 @@
     <link rel="stylesheet" href="css/modern.css">
 
     <style>
-        .glass-effect {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        #news-ticker-container {
-            background: var(--primary);
-            color: var(--text);
-            padding: 8px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-            z-index: 1001;
-            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
-        }
-
-        .ticker-content {
-            display: inline-block;
-            padding-left: 100%;
-            animation: ticker 30s linear infinite;
-        }
-
-        .ticker-item {
-            display: inline-block;
-            margin-right: 50px;
-            font-weight: 500;
-        }
-
-        @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-
         .page-header {
-            background: linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.85)), url('images/hotel1-banner.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 4rem 2rem;
+            background-color: var(--section-bg);
+            padding: 4rem 0;
             text-align: center;
-            border-bottom: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--border);
         }
 
-        /* Speaker Card Styling */
         .speaker-card {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
             overflow: hidden;
             margin-bottom: 3rem;
             transition: var(--transition);
+            box-shadow: var(--shadow-sm);
         }
 
         .speaker-card:hover {
+            box-shadow: var(--shadow-lg);
             border-color: var(--accent);
-            box-shadow: 0 0 30px rgba(220, 38, 38, 0.15);
         }
 
         .speaker-header {
-            padding: 2rem;
-            background: rgba(220, 38, 38, 0.1);
+            padding: 2.5rem;
             display: flex;
             align-items: center;
-            gap: 2rem;
-            border-bottom: 1px solid var(--glass-border);
+            gap: 2.5rem;
+            background: #f8fafc;
+            border-bottom: 1px solid #f1f5f9;
         }
 
         .speaker-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 20px;
+            width: 160px;
+            height: 160px;
+            border-radius: 1rem;
             object-fit: cover;
-            border: 4px solid var(--accent);
+            border: 4px solid white;
+            box-shadow: var(--shadow-md);
             flex-shrink: 0;
         }
 
-        .speaker-title-info h2 {
-            font-size: 1.75rem;
-            color: var(--text);
+        .speaker-info h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1e3a8a;
             margin-bottom: 0.5rem;
         }
 
-        .speaker-title-info .talk-title {
-            font-size: 1.1rem;
-            color: var(--accent);
-            font-weight: 600;
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-
-        .speaker-title-info .affiliation {
+        .speaker-info .affiliation {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.75rem;
+            background: var(--accent);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
         }
 
         .speaker-body {
-            padding: 2rem;
+            padding: 2.5rem;
         }
 
         .speaker-bio {
+            font-size: 1rem;
             line-height: 1.8;
             color: var(--text);
-            font-size: 1rem;
-        }
-
-        .keynote-badge {
-            background: var(--secondary);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-            display: inline-block;
         }
 
         @media (max-width: 768px) {
-            .speaker-header { flex-direction: column; text-align: center; }
+            .speaker-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
+            .speaker-pic {
+                width: 140px;
+                height: 140px;
+            }
         }
     </style>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/ticker-data.js" defer></script>
+    <script src="js/footer-data.js" defer></script>
+    <script src="js/dates-data.js" defer></script>
+    <script src="js/nav-data.js" defer></script>
+    <script src="js/modern.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Top News Ticker -->
     <div id="ticker-placeholder"></div>
+    <nav id="nav-placeholder" class="modern-nav"></nav>
 
-    <!-- Page Header -->
     <header class="page-header">
-        <div class="container mx-auto">
+        <div class="container">
             <h1 class="conference-title">Dignitaries & Speakers</h1>
             <p class="conference-subtitle">Distinguished guests and visionaries shaping the future of technology</p>
         </div>
     </header>
 
-    <!-- Sticky Navigation -->
-    <nav id="nav-placeholder" class="modern-nav glass-effect"></nav>
-
-    <!-- Main Content Area -->
-    <div class="main-content container mx-auto px-4 max-w-7xl" style="display: block;">
+    <div class="container py-16">
 
         <!-- Dignitaries Section -->
-        <div class="section-divider" style="margin-bottom: 3rem;">
-            <h2 class="section-title" style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">Dignitaries</h2>
-            <p style="text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem;">Meet the esteemed dignitaries of I3CSET-2026</p>
-        </div>
-
-        <!-- Dignitary 1 -->
+        <h2 class="section-title">DIGNITARIES</h2>
+        
         <div class="speaker-card">
-            <div class="speaker-header" style="background: rgba(59, 130, 246, 0.1);">
-                <img src="images/plenary_speakers/MOHDRIHAN.jpeg" alt="Dr. Mohammad Rihan" class="speaker-pic" onerror="this.src='https://ui-avatars.com/api/?name=Mohammad+Rihan&background=0f172a&color=3b82f6'">
-                <div class="speaker-title-info">
-                    <span class="keynote-badge">CHIEF GUEST</span>
+            <div class="speaker-header" style="background: #eff6ff;">
+                <img src="images/plenary_speakers/MOHDRIHAN.jpeg" alt="Dr. Mohammad Rihan" class="speaker-pic">
+                <div class="speaker-info">
+                    <span class="badge">CHIEF GUEST</span>
                     <h2>Dr. Mohammad Rihan</h2>
                     <div class="affiliation">Professor, Department of Electrical Engineering, AMU</div>
-                    <div class="affiliation" style="margin-top: 5px;">Director General of the National Institute of Solar Energy (NISE) under the Ministry of New and Renewable Energy, Government of India</div>
+                    <div class="affiliation">Director General, National Institute of Solar Energy (NISE), Government of India</div>
                 </div>
             </div>
         </div>
 
-        <!-- Dignitary 2 -->
         <div class="speaker-card">
-            <div class="speaker-header" style="background: rgba(59, 130, 246, 0.1);">
-                <img src="images/plenary_speakers/chiefguest.jpg" alt="Prof. Asheesh Kumar Singh" class="speaker-pic" onerror="this.src='https://ui-avatars.com/api/?name=Asheesh+Kumar+Singh&background=0f172a&color=3b82f6'">
-                <div class="speaker-title-info">
-                    <span class="keynote-badge">GUEST OF HONOUR</span>
+            <div class="speaker-header" style="background: #eff6ff;">
+                <img src="images/plenary_speakers/chiefguest.jpg" alt="Prof. Asheesh Kumar Singh" class="speaker-pic">
+                <div class="speaker-info">
+                    <span class="badge">GUEST OF HONOUR</span>
                     <h2>Prof. Asheesh Kumar Singh</h2>
-                    <div class="affiliation">Department of Electrical Engineering Motilal Nehru National Institute of Technology, Prayagraj, U.P, India</div>
+                    <div class="affiliation">Department of Electrical Engineering, MNNIT, Prayagraj, India</div>
                 </div>
             </div>
         </div>
 
-        <!-- Dignitary 3 -->
-        <div class="speaker-card">
-            <div class="speaker-header" style="background: rgba(59, 130, 246, 0.1);">
-                <img src="images/plenary_speakers/gauravkansal.jpg" alt="Mr. Gaurav Kansal" class="speaker-pic" onerror="this.src='https://ui-avatars.com/api/?name=Gaurav+Kansal&background=0f172a&color=3b82f6'">
-                <div class="speaker-title-info">
-                    <span class="keynote-badge">GUEST OF HONOUR</span>
+        <div class="speaker-card" style="margin-bottom: 5rem;">
+            <div class="speaker-header" style="background: #eff6ff;">
+                <img src="images/plenary_speakers/gauravkansal.jpg" alt="Mr. Gaurav Kansal" class="speaker-pic">
+                <div class="speaker-info">
+                    <span class="badge">GUEST OF HONOUR</span>
                     <h2>Mr. Gaurav Kansal</h2>
                     <div class="affiliation">Head of Train and Stations Operations, DB RRTS, UP</div>
                 </div>
@@ -217,155 +170,77 @@
         </div>
 
         <!-- Speakers Section -->
-        <div class="section-divider" style="margin-top: 6rem; margin-bottom: 3rem;">
-            <h2 class="section-title" style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">Speakers</h2>
-            <p style="text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem;">Meet the esteemed speakers of I3CSET-2026</p>
-        </div>
+        <h2 class="section-title">SPEAKERS</h2>
 
-        <!-- Speaker 1 -->
         <div class="speaker-card">
             <div class="speaker-header">
-                <img src="images/plenary_speakers/satishkabade.webp" alt="Satish Kabade" class="speaker-pic" onerror="this.src='https://ui-avatars.com/api/?name=Satish+Kabade&background=0f172a&color=3b82f6'">
-                <div class="speaker-title-info">
+                <img src="images/plenary_speakers/satishkabade.webp" alt="Satish Kabade" class="speaker-pic">
+                <div class="speaker-info">
                     <h2>MR. SATISH KABADE</h2>
-                    <div class="affiliation">IEEE Senior Member</div>
+                    <div class="affiliation">IEEE Senior Member | Expert in AI-driven Pension Systems</div>
                 </div>
             </div>
             <div class="speaker-body">
-                <div class="speaker-bio">
-                    Satish Kabade is a pioneering leader in pension technology, known for transforming outdated pension infrastructures into agile, AI-driven systems. His work integrates artificial intelligence, machine learning, and cloud-native architectures to enhance efficiency, security, and transparency across the retirement sector. He has achieved measurable improvements, such as a 63% reduction in infrastructure costs and significant gains in fraud detection accuracy. His ethical approach to innovation—embedding explainability, privacy, and compliance—demonstrates a deep understanding of both technology and regulatory demands. Through research, mentorship, and impactful implementations, he has set new benchmarks for operational excellence and responsible technological advancement in the financial services industry.
-                </div>
+                <p class="speaker-bio">Satish Kabade is a pioneering leader in pension technology, known for transforming outdated pension infrastructures into agile, AI-driven systems. His work integrates artificial intelligence, machine learning, and cloud-native architectures to enhance efficiency, security, and transparency across the retirement sector. He has achieved measurable improvements, such as a 63% reduction in infrastructure costs and significant gains in fraud detection accuracy.</p>
             </div>
         </div>
 
-        <!-- Speaker 2 -->
         <div class="speaker-card">
             <div class="speaker-header">
-                <img src="images/plenary_speakers/kelvin anoh.jpeg" alt="Kelvin Anoh" class="speaker-pic" onerror="this.src='https://ui-avatars.com/api/?name=Kelvin+Anoh&background=0f172a&color=3b82f6'">
-                <div class="speaker-title-info">
+                <img src="images/plenary_speakers/kelvin anoh.jpeg" alt="Kelvin Anoh" class="speaker-pic">
+                <div class="speaker-info">
                     <h2>DR. KELVIN ANOH</h2>
-                    <div class="affiliation">University of Chichester, Bognor Regis Campus, United Kingdom</div>
+                    <div class="affiliation">Senior Lecturer, University of Chichester, United Kingdom</div>
                 </div>
             </div>
             <div class="speaker-body">
-                <div class="speaker-bio">
-                    Dr Kelvin Anoh is a Senior Lecturer in Electrical and Electronic Engineering and Computing at the University of Chichester, Bognor Regis Campus, United Kingdom. He is the Programme Leader of the Electrical and Electronic Engineering programme. Dr Anoh is also the Research Centre Head of the Centre for Future Technologies. His research and teaching activities include Smart Infrastructure, Smart Energy Cities, Renewable Energy & Sustainability, Engineering System Modelling and Simulation, Optimisation, Machine Learning and Artificial Intelligence, and Business Models.
-                </div>
+                <p class="speaker-bio">Dr Kelvin Anoh is a Senior Lecturer in Electrical and Electronic Engineering and Computing at the University of Chichester, UK. He is the Programme Leader of the Electrical and Electronic Engineering programme and Research Centre Head of the Centre for Future Technologies. His research focus includes Smart Infrastructure, Smart Energy Cities, Renewable Energy & Sustainability.</p>
             </div>
         </div>
 
-        <!-- Speaker 3 -->
         <div class="speaker-card">
             <div class="speaker-header">
-                <img src="images/plenary_speakers/rakeshcharla.png" alt="Rakesh Charla" class="speaker-pic" onerror="this.src='https://ui-avatars.com/api/?name=Rakesh+Charla&background=0f172a&color=3b82f6'">
-                <div class="speaker-title-info">
+                <img src="images/plenary_speakers/rakeshcharla.png" alt="Rakesh Charla" class="speaker-pic">
+                <div class="speaker-info">
                     <h2>MR. RAKESH CHARLA</h2>
-                    <div class="affiliation">Senior Software Engineer - Excellence in technology and specialize in product analytics, Cloud Platform & Solutions | Security | Data & AI & ML</div>
+                    <div class="affiliation">Senior Software Engineer, Microsoft Security</div>
                 </div>
             </div>
             <div class="speaker-body">
-                <div class="speaker-bio">
-                    Rakesh Charla is a Senior Software Engineer within Microsoft Security, designs and delivers scalable, AI-driven security solutions that unify detection, investigation, and response across Microsoft 365 and Azure ecosystems. Enhanced Microsoft’s extended detection and response capabilities through deep integration of telemetry from Microsoft Defender for Servers. Endpoint and Entra ID protection. Contributed to advanced threat correlation across hybrid environments, building analytics rules and connectors, and supports posture management within Microsoft Security. Plays key role in driving Microsoft’s Zero Trust strategy by enabling faster detection, reduced alert fatigue, and stronger threat response across enterprise systems.
-                </div>
+                <p class="speaker-bio">Rakesh Charla is a Senior Software Engineer within Microsoft Security, designs and delivers scalable, AI-driven security solutions that unify detection, investigation, and response across Microsoft 365 and Azure ecosystems. He plays a key role in driving Microsoft’s Zero Trust strategy by enabling faster detection and stronger threat response across enterprise systems.</p>
             </div>
         </div>
 
-        <!-- Speaker 4 -->
         <div class="speaker-card">
             <div class="speaker-header">
-                <img src="images/plenary_speakers/sathishkrishna.jpg" alt="Sathish Krishna Anumula" class="speaker-pic" onerror="this.src='https://ui-avatars.com/api/?name=Sathish+Krishna+Anumula&background=0f172a&color=3b82f6'">
-                <div class="speaker-title-info">
-                    <h2>Mr. SATHISH KRISHNA ANUMULA</h2>
-                    <div class="affiliation">Business & Enterprise Architect for Digital Transformations | SCRS - Dis.Fellow | Fellow IETE | Fellow Raptor |Sr. IEEE Member</div>
+                <img src="images/plenary_speakers/sathishkrishna.jpg" alt="Sathish Krishna Anumula" class="speaker-pic">
+                <div class="speaker-info">
+                    <h2>MR. SATHISH KRISHNA ANUMULA</h2>
+                    <div class="affiliation">Digital Transformation Architect | Sr. IEEE Member</div>
                 </div>
             </div>
             <div class="speaker-body">
-                <div class="speaker-bio">
-                    Sathish Krishna Anumula is a seasoned Digital Transformation Architect and Technology Strategist with 22+ years of experience advancing Closed Loop Manufacturing, including PLM, supply chain, and smart factory solutions. He has worked across automotive, medical devices, semiconductors, and hi-tech electronics, combining strong technical depth with business-driven strategy. He has contributed to major global initiatives at Siemens, Microsoft, and IBM, leading the architecture, design, and deployment of complex enterprise systems, and promoting sustainable and efficient manufacturing practices. His expertise spans enterprise architecture, hybrid cloud, IIoT, and AI/ML for industrial applications, along with emerging fields such as quantum and neuromorphic computing. Sathish is also a published author of textbooks and research papers, an active reviewer for reputed journals, and a frequent keynote speaker recognized for his thought leadership in digital manufacturing innovation.
-                </div>
+                <p class="speaker-bio">Sathish Krishna Anumula is a seasoned Digital Transformation Architect and Technology Strategist with 22+ years of experience advancing Closed Loop Manufacturing. His expertise spans enterprise architecture, hybrid cloud, IIoT, and AI/ML for industrial applications. He is a published author and a frequent keynote speaker in digital manufacturing innovation.</p>
             </div>
         </div>
 
-        <!-- Speaker 5 -->
         <div class="speaker-card">
             <div class="speaker-header">
-                <img src="images/plenary_speakers/mrajitkumarsaahu.jpg" alt="Ajit Kumar Sahu" class="speaker-pic" onerror="this.src='https://ui-avatars.com/api/?name=Ajit+Kumar+Sahu&background=0f172a&color=3b82f6'">
-                <div class="speaker-title-info">
-                    <h2>Mr. AJIT KUMAR SAHU</h2>
-                    <div class="affiliation">Engineering Director | Current Location: Santa Clara, California, United States</div>
+                <img src="images/plenary_speakers/mrajitkumarsaahu.jpg" alt="Ajit Kumar Sahu" class="speaker-pic">
+                <div class="speaker-info">
+                    <h2>MR. AJIT KUMAR SAHU</h2>
+                    <div class="affiliation">Engineering Director, Data Safeguard Inc., California</div>
                 </div>
             </div>
             <div class="speaker-body">
-                <div class="speaker-bio">
-                    Ajit Sahu is a senior Engineering Leader and AI Innovator with 16+ years of experience building high-performance engineering teams and delivering secure, scalable platforms. As Director of Engineering at Data Safeguard Inc., he leads strategy for ID-PRIVACY®, the leading enterprise privacy platform powered by Responsible & Ethical AI. Previously, Ajit held key roles at Walmart Global Tech, Citi, Apple, and Wipro, driving digital transformation and AI adoption at global scale. An IEEE Senior Member and Forbes Tech Council contributor, he focuses on Generative AI, Agentic Systems, and Privacy Engineering — shaping how enterprises build trust in the age of AI.
-                </div>
-            </div>
-        </div>
-
-        <!-- Speaker 6 -->
-        <div class="speaker-card">
-            <div class="speaker-header">
-                <img src="images/plenary_speakers/omprakash.jpg" alt="Omprakash Kaiwartya" class="speaker-pic" onerror="this.src='https://ui-avatars.com/api/?name=Omprakash+Kaiwartya&background=0f172a&color=3b82f6'">
-                <div class="speaker-title-info">
-                    <h2>DR. OMPRAKASH KAIWARTYA</h2>
-                    <div class="affiliation">Associate Professor (Networks & Cybersecurity for CAV)</div>
-                </div>
-            </div>
-            <div class="speaker-body">
-                <div class="speaker-bio">
-                    Dr. Omprakash Kaiwartya is an Associate Professor (Networks & Cybersecurity for CAV) and PhD (PGR) Research Coordinator at the Department of Computer Science. He is also the Research Talk/Seminar Co-ordinator of the department. He was also the Course Leader for MSc Engineering Electronics and Cybernetics & Communication (2018-2024). He teaches Embedded Systems and Group Design Projects modules in MSc and Internet/Systems Technology, and Networks and Security modules in BSc.
-                </div>
-            </div>
-        </div>
-
-        <!-- Speaker 7 -->
-        <div class="speaker-card">
-            <div class="speaker-header">
-                <img src="images/plenary_speakers/speaker-10.jpg" alt="Rahul Kumar" class="speaker-pic" onerror="this.src='https://ui-avatars.com/api/?name=Rahul+Kumar&background=0f172a&color=3b82f6'">
-                <div class="speaker-title-info">
-                    <h2>Dr. RAHUL KUMAR</h2>
-                    <div class="affiliation">Senior Lecturer in Electrical and Electronic Engineering</div>
-                </div>
-            </div>
-            <div class="speaker-body">
-                <div class="speaker-bio">
-                    Dr. Rahul Kumar is a Senior Lecturer in Electrical & Electronic Engineering at the University of Chichester, UK . He holds a PhD in Optics from Northumbria University and specializes in sensor technology—particularly optical fibre sensors for environmental monitoring—while also exploring AI applications in engineering education.
-                </div>
-            </div>
-        </div>
-
-        <!-- Speaker 8 -->
-        <div class="speaker-card">
-            <div class="speaker-header">
-                <img src="images/plenary_speakers/kashif nisar.jpeg" alt="Kashif Nisar" class="speaker-pic" onerror="this.src='https://ui-avatars.com/api/?name=Kashif+Nisar&background=0f172a&color=3b82f6'">
-                <div class="speaker-title-info">
-                    <h2>Dr. KASHIF NISAR</h2>
-                    <div class="affiliation">The University of Notre Dame Australia, Sydney Campus</div>
-                </div>
-            </div>
-            <div class="speaker-body">
-                <div class="speaker-bio">
-                    Dr Kashif Nisar, PhD, SMIEEE, is Lecturer in Computer Science and National Course Coordinator (Sydney & Fremantle Campuses) at the School of Arts & Sciences, The University of Notre Dame Australia (Sydney campus). He is a Senior Member of the Institute of Electrical and Electronics Engineers (IEEE) and active member of the Australian Computer Society (ACS), Association for Computing Machinery (ACM) and Internet Society (ISOC-USA). His teaching spans computer science fundamentals, cybersecurity and artificial intelligence modules, and his administrative duties include coordinating national-level course delivery across campuses.
-                </div>
+                <p class="speaker-bio">Ajit Sahu is a senior Engineering Leader and AI Innovator with 16+ years of experience building high-performance engineering teams. As Director of Engineering at Data Safeguard Inc., he leads strategy for ID-PRIVACY®, the leading enterprise privacy platform powered by Responsible & Ethical AI. He is an IEEE Senior Member and Forbes Tech Council contributor.</p>
             </div>
         </div>
 
     </div>
 
-    <!-- Footer -->
     <div id="footer-placeholder"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#news-ticker-container').hover(function () {
-                $('.ticker-content').css('animation-play-state', 'paused');
-            }, function () {
-                $('.ticker-content').css('animation-play-state', 'running');
-            });
-        });
-    </script>
 </body>
 
 </html>
-

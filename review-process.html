@@ -4,26 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Process | I3CSET-2026</title>
+    <title>Review Process | I3CEET-2027</title>
 
     <!-- Meta SEO -->
-    <meta name="keywords" content="I3CSET-2026, Review Process, Peer Review, Paper Evaluation, Conference Ethics">
-    <meta name="description" content="Detailed overview of the peer review process and evaluation criteria for I3CSET-2026.">
+    <meta name="keywords" content="I3CEET-2027, Review Process, Peer Review, Paper Evaluation, Conference Ethics">
+    <meta name="description" content="Detailed overview of the peer review process and evaluation criteria for I3CEET-2027.">
 
-    <script>
-        if (localStorage.getItem('theme') === 'light') {
-            document.documentElement.classList.add('light-mode');
-            document.addEventListener('DOMContentLoaded', () => document.body.classList.add('light-mode'));
-        }
-    </script>
-    <script src="js/ticker-data.js" defer></script>
-    <script src="js/footer-data.js" defer></script>
-    <script src="js/dates-data.js" defer></script>
-    <script src="js/nav-data.js" defer></script>
-    <script src="js/modern.js" defer></script>
-    
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
@@ -32,233 +20,152 @@
 
     <style>
         .page-header {
-            background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('images/hotel1-banner.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 4rem 2rem;
+            background-color: var(--section-bg);
+            padding: 4rem 0;
             text-align: center;
-            border-bottom: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--border);
         }
 
-        .main-content {
-            display: block !important;
-            max-width: 1200px !important;
-            margin: 0 auto;
-        }
-
-        .review-section {
-            padding: 2.5rem;
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            border-radius: 16px;
-            transition: var(--transition);
-            height: 100%;
-        }
-
-        .review-section:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
-        }
-
-        .wide-section {
-            width: 100%;
-            margin-bottom: 2.5rem;
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2.5rem;
-            width: 100%;
-        }
-
-        @media (max-width: 992px) {
-            .steps-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .review-section h2 {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: var(--text);
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .review-section h2 i {
-            color: var(--accent);
-        }
-
-        .review-section p {
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 1.25rem;
-            font-size: 1.05rem;
-        }
-
-        .review-section ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 1rem;
-        }
-
-        .review-section ul li {
+        .step-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
             position: relative;
-            padding-left: 1.75rem;
-            margin-bottom: 1rem;
-            color: var(--text-muted);
-            line-height: 1.6;
+            transition: var(--transition);
         }
 
-        .review-section ul li::before {
-            content: '\f058';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
+        .step-card:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
+        }
+
+        .step-num {
             position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
-
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
+            top: -1rem;
+            left: 1.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
             background: var(--accent);
             color: white;
             border-radius: 50%;
-            font-weight: 700;
-            margin-right: 1rem;
-            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1rem;
+            box-shadow: var(--shadow-sm);
         }
-        
-        .ethics-statement {
-            background: rgba(16, 185, 129, 0.05);
-            border-left: 4px solid var(--secondary);
-            padding: 2rem;
-            border-radius: 0 16px 16px 0;
+
+        .step-card h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .step-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem 2rem;
+            margin-top: 3rem;
+        }
+
+        .ethics-hero {
+            background-color: #f0fdf4;
+            border: 1px solid #bcf0da;
+            padding: 3rem;
+            border-radius: 1rem;
+            margin-top: 4rem;
+        }
+
+        .ethics-hero h2 {
+            color: #166534;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
     </style>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/ticker-data.js" defer></script>
+    <script src="js/footer-data.js" defer></script>
+    <script src="js/dates-data.js" defer></script>
+    <script src="js/nav-data.js" defer></script>
+    <script src="js/modern.js" defer></script>
 </head>
 
 <body>
+
     <div id="ticker-placeholder"></div>
+    <nav id="nav-placeholder" class="modern-nav"></nav>
 
     <header class="page-header">
-        <div class="container mx-auto">
+        <div class="container">
             <h1 class="conference-title">Peer Review Process</h1>
             <p class="conference-subtitle">Ensuring Excellence and Integrity in Scientific Research</p>
         </div>
     </header>
 
-    <nav id="nav-placeholder" class="modern-nav glass-effect"></nav>
-
-    <div class="main-content container mx-auto px-4 max-w-7xl py-12">
-        <div class="content-area" style="width: 100%;">
-            
-            <div class="wide-section">
-                <section class="review-section">
-                    <h2><i class="fa fa-magnifying-glass"></i> Overview</h2>
-                    <p>I3CSET-2026 follows a rigorous peer-review evaluation system to maintain the highest standards of scientific quality and contribution.</p>
-                </section>
+    <div class="container py-16">
+        
+        <section>
+            <h2 class="section-title">EVALUATION WORKFLOW</h2>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h3>Submission</h3>
+                    <p>Authors submit research via Microsoft CMT. Papers are initially screened for technical relevance and scope.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h3>Technical Check</h3>
+                    <p>Preliminary check for formatting, language clarity, and adherence to submission guidelines.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h3>Reviewer Allocation</h3>
+                    <p>Each paper is assigned to at least two independent expert reviewers to avoid conflicts of interest.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">4</div>
+                    <h3>Evaluation</h3>
+                    <p>Reviewers assess significance, technical accuracy, novelty, and practical impact of the work.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">5</div>
+                    <h3>Decision</h3>
+                    <p>TPC makes a final call based on reviewer feedback: Accept, Minor/Major Revision, or Reject.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">6</div>
+                    <h3>Final Steps</h3>
+                    <p>Authors submit camera-ready versions. Final inclusion depends on registration and presentation.</p>
+                </div>
             </div>
+        </section>
 
-            <div class="steps-grid">
-                <section class="review-section">
-                    <h2><span class="step-number">1</span> Paper Submission</h2>
-                    <p>Authors submit their research papers to I3CSET-2026 through the official submission system, preferably on <strong>CMT</strong> before the deadline. Papers are screened on their technical content and relevance to conference topics. Submissions that fall outside the intended scope may be disregarded.</p>
-                </section>
+        <section class="ethics-hero">
+            <h2><i class="fa fa-scale-balanced"></i> Ethics Statement</h2>
+            <p style="color: #166534; line-height: 1.8;">
+                The conference is committed to the highest standards of academic integrity. All submitted papers must be original and free from plagiarism. Violations involving data fabrication or unethical research will result in immediate rejection. We strictly follow a fair, confidential, and unbiased peer-review process.
+            </p>
+        </section>
 
-                <section class="review-section">
-                    <h2><span class="step-number">2</span> Initial Screening (Preliminary Check)</h2>
-                    <p>The conference organizers conduct an initial check to ensure all papers meet basic requirements, such as:</p>
-                    <ul>
-                        <li>Reference scope and topic relevance</li>
-                        <li>Proper formatting and structure</li>
-                        <li>Language clarity</li>
-                        <li>Compliance with submission guidelines</li>
-                    </ul>
-                    <p>Papers failing these checks may receive a desk rejection.</p>
-                </section>
-
-                <section class="review-section">
-                    <h2><span class="step-number">3</span> Assignment to the Technical Program Committee (TPC)</h2>
-                    <p>Qualifying papers are assigned to members of the Technical Program Committee. The TPC ensures the papers reached suitable reviewers who have expertise in the paper's subject area.</p>
-                </section>
-
-                <section class="review-section">
-                    <h2><span class="step-number">4</span> Reviewer Allocation</h2>
-                    <p>Each paper is evaluated by two or more independent reviewers. Reviewers are selected based on their expertise and to avoid conflicts of interest. They may include faculty members, researchers, and industry experts.</p>
-                </section>
-
-                <section class="review-section">
-                    <h2><span class="step-number">5</span> Review Method</h2>
-                    <p>I3CSET-2026 generally follows a peer reviewed evaluation system, where reviewers critically assess the submitted research. The review process helps protect review confidentiality, reduces decision-making bias, and ensures a fair evaluation process.</p>
-                </section>
-
-                <section class="review-section">
-                    <h2><span class="step-number">6</span> Evaluation Criteria</h2>
-                    <p>Reviewers assess the quality of the submission using important factors such as:</p>
-                    <ul>
-                        <li>Research significance and novelty of the work</li>
-                        <li>Technical accuracy and correctness</li>
-                        <li>Relevance to conference themes</li>
-                        <li>Clarity, structure, and presentation of results</li>
-                        <li>Research significance and practical impact</li>
-                    </ul>
-                </section>
-
-                <section class="review-section">
-                    <h2><span class="step-number">7</span> Reviewer Reports and Recommendations</h2>
-                    <p>Reviewers provide detailed comments, corrections, and improvement suggestions. They recommend one of the following decisions:</p>
-                    <ul>
-                        <li><strong>Accept</strong> (Direct acceptance)</li>
-                        <li><strong>Accept with Minor Revisions</strong></li>
-                        <li><strong>Major Revision Required</strong></li>
-                        <li><strong>Reject</strong></li>
-                    </ul>
-                </section>
-
-                <section class="review-section">
-                    <h2><span class="step-number">8</span> Final Decision by the Committee</h2>
-                    <p>The TPC and area committee make the final acceptance decision based on reviewed feedback. Papers with strong contribution and acceptable quality are selected for presentation and publication.</p>
-                </section>
-
-                <section class="review-section">
-                    <h2><span class="step-number">9</span> Revision and Camera-Ready Submission</h2>
-                    <p>If revisions are required, authors must update the paper and submit a final camera-ready version. This version must strictly follow the formatting rules, since it will be included in the conference proceedings.</p>
-                </section>
-
-                <section class="review-section">
-                    <h2><span class="step-number">10</span> Registration, Presentation, and Publication</h2>
-                    <p>Final publication depends on completing the required steps, such as:</p>
-                    <ul>
-                        <li>Author registration</li>
-                        <li>Final paper submission approval</li>
-                        <li>Presentation (oral/poster) during the conference</li>
-                    </ul>
-                    <p>After a successful presentation, accepted papers are included in the I3CSET-2026 conference proceedings.</p>
-                </section>
-            </div>
-
-            <div class="wide-section">
-                <section class="review-section ethics-statement">
-                    <h2><i class="fa fa-scale-balanced" style="color:var(--secondary)"></i> Ethics and Malpractice Statement</h2>
-                    <p>The conference is committed to maintaining the highest standards of academic integrity and ethical publishing. All submitted papers must be original, unpublished, and free from plagiarism. Violations of any form of data fabrication, falsification, or unethical research practices will result in rejection.</p>
-                    <p>The conference follows a fair, unbiased, and confidential peer-review process, and all authors, reviewers, and editors are expected to adhere to accepted ethical guidelines in research and publication.</p>
-                </section>
-            </div>
-
-        </div>
     </div>
 
     <div id="footer-placeholder"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
+
 </html>

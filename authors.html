@@ -4,27 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authors | I3CSET-2026</title>
+    <title>Information for Authors | I3CEET-2027</title>
 
     <!-- Meta SEO -->
-    <meta name="keywords"
-        content="I3CSET-2026, Authors, Guidelines, Paper Submission, Computing, Communication, Sustainable Energy Technologies">
-    <meta name="description"
-        content="Author guidelines and submission information for I3CSET-2026 conference.">
+    <meta name="keywords" content="I3CEET-2027, Authors, Guidelines, Paper Submission, Computing, Communication, Energy Efficiency Technologies">
+    <meta name="description" content="Author guidelines and submission information for I3CEET-2027 conference.">
 
-    <script>
-        if (localStorage.getItem('theme') === 'light') {
-            document.documentElement.classList.add('light-mode');
-            document.addEventListener('DOMContentLoaded', () => document.body.classList.add('light-mode'));
-        }
-    </script>
-    <script src="js/ticker-data.js" defer></script>
-    <script src="js/footer-data.js" defer></script>
-    <script src="js/dates-data.js" defer></script>
-    <script src="js/nav-data.js" defer></script>
-    <script src="js/modern.js" defer></script>
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
@@ -32,172 +19,141 @@
     <link rel="stylesheet" href="css/modern.css">
 
     <style>
-        .glass-effect {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .authors-header {
-            background: linear-gradient(rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.9)), url('images/hotel1-banner.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 5rem 2rem;
+        .page-header {
+            background-color: var(--section-bg);
+            padding: 4rem 0;
             text-align: center;
-            border-bottom: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--border);
         }
 
-        .author-guidelines ul {
+        .author-list {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
-        .author-guidelines li {
+        .author-list li {
             position: relative;
-            padding-left: 2.25rem;
+            padding-left: 2.5rem;
             margin-bottom: 1.5rem;
-            line-height: 1.7;
             color: var(--text);
+            line-height: 1.7;
         }
 
-        .author-guidelines li::before {
+        .author-list li::before {
             content: '\f058';
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             position: absolute;
             left: 0;
             color: var(--accent);
-            font-size: 1.2rem;
+            font-size: 1.25rem;
         }
 
-        .highlight-box {
-            background: rgba(220, 38, 38, 0.1);
+        .alert-box {
+            background-color: #eff6ff;
             border-left: 4px solid var(--accent);
             padding: 1.5rem;
-            border-radius: 0 12px 12px 0;
+            border-radius: 0.5rem;
             margin-bottom: 2rem;
         }
 
-        .resource-link {
-            transition: var(--transition);
+        .resource-card {
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 0.75rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 8px;
+            padding: 1rem;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
             margin-bottom: 0.75rem;
             text-decoration: none;
-            color: var(--text);
-            border: 1px solid transparent;
+            color: #1e3a8a;
+            font-weight: 600;
+            transition: var(--transition);
         }
 
-        .resource-link:hover {
-            background: rgba(220, 38, 38, 0.1);
+        .resource-card:hover {
             border-color: var(--accent);
+            background-color: #f8fafc;
             transform: translateX(5px);
         }
-    </style>
-    <script src="js/sponsor-data.js" defer></script>
 
+        .resource-card i {
+            font-size: 1.25rem;
+            color: var(--accent);
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/ticker-data.js" defer></script>
+    <script src="js/footer-data.js" defer></script>
+    <script src="js/dates-data.js" defer></script>
+    <script src="js/nav-data.js" defer></script>
+    <script src="js/modern.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Top News Ticker -->
     <div id="ticker-placeholder"></div>
+    <nav id="nav-placeholder" class="modern-nav"></nav>
 
-    <!-- Page Header -->
-    <header class="authors-header">
-        <div class="container mx-auto">
+    <header class="page-header">
+        <div class="container">
             <h1 class="conference-title">Information for Authors</h1>
-            <p class="conference-subtitle">Guidelines and instructions for I3CSET-2026 presenters</p>
+            <p class="conference-subtitle">Guidelines and instructions for I3CEET-2027 presenters</p>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav id="nav-placeholder" class="modern-nav glass-effect"></nav>
+    <div class="container py-16">
+        
+        <div class="main-content">
+            <main>
+                <section class="section-card">
+                    <div class="alert-box">
+                        <h3 style="color: #1e3a8a; font-weight: 700; margin-bottom: 0.5rem;">Important Notice</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">If you are an author or presenter at I3CEET-2027, please adhere to these guidelines to ensure a high-quality academic experience.</p>
+                    </div>
 
-
-    <!-- Main Content Area -->
-    <div class="main-content container mx-auto px-4 max-w-7xl">
-
-        <main class="content-area">
-            <section class="section-card">
-                <div class="highlight-box">
-                    <h3 class="section-title welcome-card" style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text);">Important Notice</h3>
-                    <p>If you are an author and/or presenter of an article at <strong>I3CSET-2026</strong>, please note the following guidelines to ensure a smooth conference experience.</p>
-                </div>
-
-                <div class="author-guidelines">
-                    <ul>
-                        <li>
-                            All accepted and presented quality papers will be indexed by Scopus.
-                        </li>
-                        <li>
-                            Acceptance of articles is made with the understanding that at least one author will attend the conference to deliver a presentation; severe disruption to a session is caused if an article is not presented. In the event that one of the article's authors cannot attend, the corresponding author should inform the Program Chair as soon as possible.
-                        </li>
-                        <li>
-                            In order to submit the final version of the manuscript and abstract, at least one of the authors of the article must <a href="registration.html" style="color:var(--accent); font-weight: 600;">register</a> for the conference to upload the final manuscript.
-                        </li>
-                        <li>
-                            All necessary forms needed for submission of the final manuscript will be created by the submission website at the time of final submission.
-                        </li>
-                        <li>
-                            Please use the standard article templates for formating.
-                        </li>
-                        <li>
-                            The nominal page limit for all articles is <strong>five (5) pages</strong>; articles exceeding these limits are subject to a page over-length fee. Excess page charges are applicable per page (maximum 8 pages total).
-                        </li>
-                        <li>
-                            Authors should bring their own notebooks/tablets/laptops/Pendrives for presentations. Projectors support HDMI / Type-C, but we recommend bringing your own adapters to ensure compatibility.
-                        </li>
+                    <ul class="author-list">
+                        <li>All accepted and presented quality papers will be indexed by <strong>Scopus</strong>.</li>
+                        <li>Acceptance of articles is made with the understanding that at least one author will attend the conference to deliver a presentation; severe disruption to a session is caused if an article is not presented.</li>
+                        <li>To submit the final version, at least one author must <a href="registration.html" style="color: var(--accent); font-weight: 700;">register</a> for the conference.</li>
+                        <li>The nominal page limit for all articles is <strong>five (5) pages</strong>; articles exceeding these limits are subject to a maximum of 8 pages with an over-length fee.</li>
+                        <li>Authors should bring their own notebooks/tablets/laptops for presentations. Projectors support HDMI / Type-C connectivity.</li>
                     </ul>
-                </div>
-            </section>
-        </main>
+                </section>
+            </main>
 
-        <aside class="sidebar">
-            <section class="section-card">
-                <h3 class="section-title" style="font-size: 1.25rem;"><i class="fa fa-calendar-day"></i> KEY DATES</h3>
-                <div id="dates-placeholder"></div>
-            </section>
+            <aside>
+                <section class="section-card">
+                    <h3 class="section-title" style="font-size: 1.5rem;">IMPORTANT DATES</h3>
+                    <div id="dates-placeholder"></div>
+                </section>
 
-            <section class="section-card">
-                <h3 class="section-title" style="font-size: 1.25rem;"><i class="fa fa-download"></i> IMPORTANT RESOURCES</h3>
-                <div style="margin-top: 1rem;">
-                    <a href="resources/call_for_papers.pdf" class="resource-link">
-                        <i class="fa fa-file-pdf" style="color: var(--accent); font-size: 1.2rem;"></i>
+                <section class="section-card">
+                    <h3 class="section-title" style="font-size: 1.5rem;">RESOURCES</h3>
+                    <a href="resources/call_for_papers.pdf" class="resource-card">
+                        <i class="fa fa-file-pdf"></i>
                         <span>Call for Papers</span>
                     </a>
-                    <a href="resources/Submission_Format_Doc.zip" class="resource-link">
-                        <i class="fa fa-file-code" style="color: var(--accent); font-size: 1.2rem;"></i>
+                    <a href="resources/Submission_Format_Doc.zip" class="resource-card">
+                        <i class="fa fa-file-code"></i>
                         <span>Article Templates</span>
                     </a>
-                    <a href="resources/copyright_form.docx" class="resource-link">
-                        <i class="fa fa-copyright" style="color: var(--accent); font-size: 1.2rem;"></i>
+                    <a href="resources/copyright_form.docx" class="resource-card">
+                        <i class="fa fa-copyright"></i>
                         <span>Copyright Form</span>
                     </a>
-                </div>
-                <div style="margin-top: 1.5rem; border-top: 1px solid var(--glass-border); padding-top: 1rem; text-align: center;">
-                    <a href="paper-sub-guidelines.html#resources" style="color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem;">
-                        Browse All Resources <i class="fa fa-arrow-right"></i>
-                    </a>
-                </div>
-            </section>
-
-            <div id="sponsors-placeholder"></div>
-        </aside>
-
+                </section>
+            </aside>
+        </div>
 
     </div>
 
-    <!-- Footer -->
     <div id="footer-placeholder"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 
 </html>
-
-

@@ -4,26 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sponsors | I3CSET-2026</title>
+    <title>Sponsors | I3CEET-2027</title>
 
     <!-- Meta SEO -->
-    <meta name="keywords"
-        content="I3CSET-2026, Sponsors, Partners, Computing, Communication, Sustainable Energy">
-    <meta name="description" content="View the sponsors and partners for I3CSET-2026 conference.">
+    <meta name="keywords" content="I3CEET-2027, Sponsors, Partners, Computing, Communication, Energy Efficiency">
+    <meta name="description" content="View the sponsors and partners for I3CEET-2027 conference.">
 
-    <script>
-        if (localStorage.getItem('theme') === 'light') {
-            document.documentElement.classList.add('light-mode');
-            document.addEventListener('DOMContentLoaded', () => document.body.classList.add('light-mode'));
-        }
-    </script>
-    <script src="js/ticker-data.js" defer></script>
-    <script src="js/footer-data.js" defer></script>
-    <script src="js/dates-data.js" defer></script>
-    <script src="js/nav-data.js" defer></script>
-    <script src="js/modern.js" defer></script>
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
@@ -31,311 +19,201 @@
     <link rel="stylesheet" href="css/modern.css">
 
     <style>
-        .glass-effect {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
         .page-header {
-            background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('images/hotel1-banner.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 4rem 2rem;
+            background-color: var(--section-bg);
+            padding: 4rem 0;
             text-align: center;
-            border-bottom: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--border);
         }
 
-        /* Sponsors Grid */
-        .sponsors-container {
-            margin: 3rem 0;
+        .sponsor-tier-box {
+            margin-bottom: 5rem;
         }
 
-        .sponsor-tier {
-            margin-bottom: 4rem;
-        }
-
-        .tier-title {
-            font-size: 1.5rem;
-            color: var(--text);
-            margin-bottom: 2rem;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-        }
-
-        .tier-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: var(--accent);
-            margin: 0.5rem auto;
-        }
-
-        .logo-grid {
-            display: flex;
-            flex-wrap: wrap;
+        .tier-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            align-items: center;
-            justify-content: center;
+            margin-top: 3rem;
         }
 
-        .logo-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            transition: var(--transition);
-            width: 280px;
-            height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .logo-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.2);
-        }
-
-        .logo-card img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-        }
-
-        /* Tier Cards Style */
         .tier-card {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
             padding: 2.5rem 1.5rem;
             text-align: center;
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
+            box-shadow: var(--shadow-sm);
             display: flex;
             flex-direction: column;
-            height: 100%;
         }
 
         .tier-card:hover {
-            transform: translateY(-12px);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
             border-color: var(--accent);
-            background: rgba(220, 38, 38, 0.03);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .tier-badge {
-            position: absolute;
-            top: 1.5rem;
-            right: -2.5rem;
-            background: var(--accent);
-            color: white;
-            padding: 0.3rem 3rem;
-            transform: rotate(45deg);
-            font-size: 0.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .tier-icon {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+            color: var(--accent);
         }
 
         .tier-name {
             font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text);
+            font-weight: 800;
+            color: #1e3a8a;
             margin-bottom: 0.5rem;
         }
 
         .tier-price {
-            font-size: 2.25rem;
+            font-size: 2rem;
             font-weight: 800;
-            color: var(--secondary);
+            color: var(--accent);
             margin: 1.5rem 0;
-            font-family: 'Outfit', sans-serif;
         }
 
-        .perks-list {
-            margin-top: 2rem;
+        .perks {
             text-align: left;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
             flex-grow: 1;
         }
 
-        .perks-list div {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
+        .perks li {
+            margin-bottom: 0.75rem;
             display: flex;
-            gap: 1rem;
-            line-height: 1.4;
+            gap: 0.75rem;
+            align-items: flex-start;
         }
 
-        .perks-list i {
-            color: var(--accent);
+        .perks i {
+            color: #10b981;
             font-size: 0.8rem;
-            margin-top: 0.2rem;
+            margin-top: 0.25rem;
+        }
+
+        .logo-box {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            transition: var(--transition);
+        }
+
+        .logo-box:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
+        }
+
+        .logo-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
     </style>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/ticker-data.js" defer></script>
+    <script src="js/footer-data.js" defer></script>
+    <script src="js/dates-data.js" defer></script>
+    <script src="js/nav-data.js" defer></script>
+    <script src="js/modern.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Top News Ticker -->
     <div id="ticker-placeholder"></div>
+    <nav id="nav-placeholder" class="modern-nav"></nav>
 
-    <!-- Page Header -->
     <header class="page-header">
-        <div class="container mx-auto">
+        <div class="container">
             <h1 class="conference-title">Our Sponsors</h1>
-            <p class="conference-subtitle">Proudly supported by leading organizations</p>
+            <p class="conference-subtitle">Proudly supported by leading organizations and technical partners</p>
         </div>
     </header>
 
-    <!-- Sticky Navigation -->
-    <nav id="nav-placeholder" class="modern-nav glass-effect"></nav>
-
-    <!-- Main Content Area -->
-    <div class="container mx-auto px-4 max-w-7xl py-12">
-
-        <main class="content-full">
-
-            <section class="section-card" style="text-align: center;">
-                <p style="font-size: 1.1rem; line-height: 1.7;">
-                    I3CSET-2026 is made possible through the generous support of our technical co-sponsors and partners.
-                    We thank them for their commitment to advancing technology in computing and sustainable energy.
-                </p>
-            </section>
-
-            <div class="sponsors-container">
-                <div class="sponsor-tier">
-                    <h2 class="tier-title">Our Technical Partners</h2>
-                    <div class="logo-grid">
-                        <div class="logo-card">
-                            <img src="images/Blue-Transparent-1024x287.png" alt="Galgotias College"
-                                onerror="this.src='https://via.placeholder.com/300x120?text=Galgotias+College'">
-                        </div>
-                        <div class="logo-card">
-                            <img src="images/CRC_press_logo.png" alt="CRC_press_logo"
-                                onerror="this.src='https://via.placeholder.com/200x80?text=CRC_press_logo'">
-                        </div>
-                        <div class="logo-card">
-                            <img src="images/gcet_logo.png" alt="Galgotias College"
-                                onerror="this.src='images/gcet_logo.png'">
-                        </div>
-                        <div class="logo-card">
-                            <img src="images/I3CSET Logo Tag.png" alt="I3CSET Logo"
-                                onerror="this.src='images/I3CSET Logo Tag.png'">
-                        </div>
-                    </div>
+    <div class="container py-16">
+        
+        <section class="sponsor-tier-box">
+            <h2 class="section-title">TECHNICAL PARTNERS</h2>
+            <div class="grid gap-8" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 3rem;">
+                <div class="logo-box">
+                    <img src="images/ieee-logo.png" alt="Galgotias College">
+                </div>
+                <div class="logo-box">
+                    <img src="images/ieee-up-logo.png" alt="CRC Press">
+                </div>
+                <div class="logo-box">
+                    <img src="images/GCET Logo-01.jpeg" alt="GCET Logo">
+                </div>
+                <div class="logo-box">
+                    <img src="images/I3CEET Logo Tag.png" alt="I3CEET Logo">
                 </div>
             </div>
+        </section>
 
-            <!-- Sponsorship Tiers Layout -->
-            <section class="section-card">
-                <h2 class="section-title welcome-card"><i class="fa fa-gem"></i> Partnership Opportunities</h2>
-                
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
-                    
-                    <!-- Platinum -->
-                    <div class="tier-card" style="flex: 1; max-width: 400px; min-width: 320px;">
-                        <div class="tier-badge">Premium</div>
-                        <div class="tier-icon" style="color: #00d2ff;"><i class="fa fa-award"></i></div>
-                        <h3 class="tier-name">Platinum Sponsor</h3>
-                        <div class="tier-price">₹1,00,000</div>
-                        <div class="perks-list">
-                            <div><i class="fa fa-check"></i> <span>Premium Logo Placement on Banner & Material</span></div>
-                            <div><i class="fa fa-check"></i> <span>Special Acknowledgement during Inaugural Ceremony</span></div>
-                            <div><i class="fa fa-check"></i> <span>Exclusive Digital Brand Promotion Coverage</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Gold -->
-                    <div class="tier-card" style="flex: 1; max-width: 400px; min-width: 320px;">
-                        <div class="tier-badge">Premium</div>
-                        <div class="tier-icon" style="color: #fbbf24;"><i class="fa fa-medal"></i></div>
-                        <h3 class="tier-name">Gold Sponsor</h3>
-                        <div class="tier-price">₹75,000</div>
-                        <div class="perks-list">
-                            <div><i class="fa fa-check"></i> <span>Logo placement on promotional materials</span></div>
-                            <div><i class="fa fa-check"></i> <span>Acknowledgment during key technical sessions</span></div>
-                            <div><i class="fa fa-check"></i> <span>Social Media Shoutouts</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Silver -->
-                    <div class="tier-card" style="flex: 1; max-width: 400px; min-width: 320px;">
-                        <div class="tier-icon" style="color: #94a3b8;"><i class="fa fa-medal"></i></div>
-                        <h3 class="tier-name">Silver Sponsor</h3>
-                        <div class="tier-price">₹50,000</div>
-                        <div class="perks-list">
-                            <div><i class="fa fa-check"></i> <span>Logo placement on banners and flyers</span></div>
-                            <div><i class="fa fa-check"></i> <span>Acknowledgment in conference announcements</span></div>
-                            <div><i class="fa fa-check"></i> <span>Newsletter Featured Logo</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Bronze -->
-                    <div class="tier-card" style="flex: 1; max-width: 400px; min-width: 320px;">
-                        <div class="tier-icon" style="color: #b45309;"><i class="fa fa-medal"></i></div>
-                        <h3 class="tier-name">Bronze Sponsor</h3>
-                        <div class="tier-price">₹25,000</div>
-                        <div class="perks-list">
-                            <div><i class="fa fa-check"></i> <span>Logo featured on selected event materials</span></div>
-                            <div><i class="fa fa-check"></i> <span>Acknowledgment during the closing ceremony</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Food & Refreshments -->
-                    <div class="tier-card" style="border-style: dashed; border-width: 2px; flex: 1; max-width: 400px; min-width: 320px;">
-                        <div class="tier-icon" style="color: var(--accent);"><i class="fa fa-utensils"></i></div>
-                        <h3 class="tier-name">Food & Refreshments</h3>
-                        <div class="tier-price" style="font-size: 1.5rem;">Partner Contribution</div>
-                        <div class="perks-list">
-                            <div><i class="fa fa-check"></i> <span>Official Food & Refreshments Partner status</span></div>
-                            <div><i class="fa fa-check"></i> <span>Special acknowledgment during all lunch breaks</span></div>
-                            <div><i class="fa fa-comment-dots"></i> <span>Customized contribution options available</span></div>
-                        </div>
-                    </div>
-
+        <section class="sponsor-tier-box">
+            <h2 class="section-title">PARTNERSHIP OPPORTUNITIES</h2>
+            <div class="tier-card-grid">
+                <!-- Platinum -->
+                <div class="tier-card">
+                    <i class="fa fa-gem tier-icon"></i>
+                    <h3 class="tier-name">Platinum Sponsor</h3>
+                    <div class="tier-price">₹1,00,000</div>
+                    <ul class="perks">
+                        <li><i class="fa fa-check"></i> Premium Logo Placement on all banners</li>
+                        <li><i class="fa fa-check"></i> Special acknowledgment in Inaugural ceremony</li>
+                        <li><i class="fa fa-check"></i> Exclusive digital brand promotion coverage</li>
+                    </ul>
                 </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section class="section-card" style="border-top: 3px solid var(--accent);">
-                <div style="text-align: center;">
-                    <h2 style="font-size: 1.5rem; color: var(--accent); margin-bottom: 1rem;">Sponsorship Inquiries</h2>
-                    <p style="margin-bottom: 2rem; color: var(--text-muted);">For sponsorship confirmation and further discussions, kindly contact the organising committee:</p>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem;">
-                        <a href="tel:7307500835" style="background: var(--glass); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--glass-border); flex: 1; min-width: 280px; max-width: 320px; transition: var(--transition); text-decoration: none; display: block;">
-                            <i class="fa fa-phone" style="color: var(--accent); margin-bottom: 0.5rem; display: block;"></i>
-                            <div style="font-size: 1.1rem; font-weight: 600; color: var(--text);">7307500835</div>
-                            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Contact Coordinator</div>
-                        </a>
-                        <div style="background: var(--glass); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--glass-border); flex: 1; min-width: 280px; max-width: 320px; overflow-wrap: break-word;">
-                            <i class="fa fa-envelope" style="color: var(--accent); margin-bottom: 0.5rem; display: block;"></i>
-                            <div style="font-size: 1.05rem; font-weight: 600; overflow-wrap: break-word; color: var(--text);">yuvraj.singh2017ys@gmail.com</div>
-                            <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.8rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem;">i3cset2025@galgotiacollege.edu</div>
-                        </div>
-                    </div>
+                <!-- Gold -->
+                <div class="tier-card">
+                    <i class="fa fa-medal tier-icon" style="color: #fbbf24;"></i>
+                    <h3 class="tier-name">Gold Sponsor</h3>
+                    <div class="tier-price">₹75,000</div>
+                    <ul class="perks">
+                        <li><i class="fa fa-check"></i> Logo placement on promotional materials</li>
+                        <li><i class="fa fa-check"></i> Acknowledgment during technical sessions</li>
+                        <li><i class="fa fa-check"></i> Social media shoutouts</li>
+                    </ul>
                 </div>
-            </section>
+                <!-- Silver -->
+                <div class="tier-card">
+                    <i class="fa fa-medal tier-icon" style="color: #94a3b8;"></i>
+                    <h3 class="tier-name">Silver Sponsor</h3>
+                    <div class="tier-price">₹50,000</div>
+                    <ul class="perks">
+                        <li><i class="fa fa-check"></i> Logo on banners and flyers</li>
+                        <li><i class="fa fa-check"></i> Newsletter featured logo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-        </main>
+        <section class="section-card" style="background: #f8fafc; border-top: 4px solid var(--accent);">
+            <div class="text-center">
+                <h3 style="color: #1e3a8a; font-weight: 800; font-size: 1.5rem; margin-bottom: 1rem;">Sponsorship Inquiries</h3>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Interested in partnering with us? Contact the organizing committee today.</p>
+                <div class="flex justify-center gap-8" style="flex-wrap: wrap;">
+                    <a href="mailto:i3ceet2027@galgotiacollege.edu" class="btn btn-primary">Email Inquiries</a>
+                    <a href="tel:7307500835" class="btn btn-outline">Call Coordinator</a>
+                </div>
+            </div>
+        </section>
 
     </div>
 
-    <!-- Footer -->
     <div id="footer-placeholder"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 
 </html>

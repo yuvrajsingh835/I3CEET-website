@@ -4,36 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organizing Committee | I3CSET-2026</title>
+    <title>Organizing Committee | I3CEET-2027</title>
 
     <!-- Meta SEO -->
-    <meta name="keywords"
-        content="I3CSET-2026, Organizing Committee, Patrons, GCET, Computing, Communication, Sustainable Energy Technologies, Leadership">
-    <meta name="description"
-        content="Meet the visionary leadership and organizing committee of I3CSET-2026 at Galgotias College of Engineering and Technology (GCET).">
-    <meta name="author" content="I3CSET-2026 Committee">
+    <meta name="keywords" content="I3CEET-2027, Organizing Committee, Patrons, GCET, Computing, Communication, Energy Efficiency Technologies, Leadership">
+    <meta name="description" content="Meet the visionary leadership and organizing committee of I3CEET-2027 at Galgotias College of Engineering and Technology (GCET).">
 
-    <!-- Open Graph / social media -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://i3cset.org/committe.html">
-    <meta property="og:title" content="Organizing Committee | I3CSET-2026">
-    <meta property="og:description"
-        content="The dedicated team behind the 2nd International Conference on Computing, Communication and Sustainable Energy Technologies.">
-    <meta property="og:image" content="images/hotel1-banner.jpg">
-
-    <script>
-        if (localStorage.getItem('theme') === 'light') {
-            document.documentElement.classList.add('light-mode');
-            document.addEventListener('DOMContentLoaded', () => document.body.classList.add('light-mode'));
-        }
-    </script>
-    <script src="js/ticker-data.js" defer></script>
-    <script src="js/footer-data.js" defer></script>
-    <script src="js/dates-data.js" defer></script>
-    <script src="js/nav-data.js" defer></script>
-    <script src="js/modern.js" defer></script>
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
@@ -41,19 +19,15 @@
     <link rel="stylesheet" href="css/modern.css">
 
     <style>
-        .glass-effect {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .committee-header {
+            background-color: var(--section-bg);
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
         }
 
-        .committee-header {
-            background: linear-gradient(rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.9)), url('images/hotel1-banner.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 4rem 2rem;
-            text-align: center;
-            border-bottom: 1px solid var(--glass-border);
+        .category-container {
+            margin-bottom: 5rem;
         }
 
         .member-grid {
@@ -64,31 +38,33 @@
         }
 
         .member-card {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
+            background: white;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 0.75rem;
             padding: 2rem;
             text-align: center;
             transition: var(--transition);
             display: flex;
             flex-direction: column;
             align-items: center;
+            box-shadow: var(--shadow-sm);
         }
 
         .member-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent);
-            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-left-width: 6px;
         }
 
         .member-img-wrapper {
-            width: 150px;
-            height: 150px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             overflow: hidden;
             margin-bottom: 1.5rem;
-            border: 3px solid var(--accent);
-            background: #1e293b;
+            border: 3px solid #f3f4f6;
+            box-shadow: var(--shadow-sm);
         }
 
         .member-img-wrapper img {
@@ -98,89 +74,59 @@
         }
 
         .member-name {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 700;
-            color: var(--text);
+            color: #1e3a8a;
             margin-bottom: 0.25rem;
         }
 
         .member-role {
-            font-size: 1rem;
-            font-weight: 600;
+            font-size: 0.85rem;
+            font-weight: 700;
             color: var(--accent);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.05em;
         }
 
         .member-org {
             font-size: 0.9rem;
             color: var(--text-muted);
-            line-height: 1.4;
-        }
-
-        .category-title {
-            text-align: center;
-            font-size: 2.25rem;
-            font-weight: 800;
-            margin: 4rem 0 2rem;
-            padding-bottom: 1rem;
-            position: relative;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .category-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 2px;
+            line-height: 1.5;
         }
 
         /* Roles Table Styling */
-        .roles-container {
-            margin-top: 5rem;
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 2.5rem;
-            overflow-x: auto;
+        .roles-section {
+            background-color: var(--section-bg);
+            padding: 5rem 0;
+            border-top: 1px solid var(--border);
         }
 
         .roles-table {
             width: 100%;
             border-collapse: collapse;
-            color: var(--text);
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
         }
 
         .roles-table th {
             text-align: left;
-            padding: 1.25rem;
-            background: rgba(220, 38, 38, 0.1);
-            color: var(--accent);
-            font-weight: 700;
+            padding: 1.5rem;
+            background: #f8fafc;
+            color: #1e3a8a;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-            border-bottom: 2px solid var(--glass-border);
+            font-size: 0.8rem;
+            border-bottom: 2px solid #e2e8f0;
         }
 
         .roles-table td {
-            padding: 1.25rem;
-            border-bottom: 1px solid var(--glass-border);
+            padding: 1.5rem;
+            border-bottom: 1px solid #f1f5f9;
             vertical-align: top;
             font-size: 0.95rem;
-        }
-
-        .roles-table tr:hover {
-            background: rgba(255, 255, 255, 0.02);
         }
 
         .members-list {
@@ -190,356 +136,237 @@
         }
 
         .members-list li {
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.5rem;
             color: var(--text-muted);
+            position: relative;
+            padding-left: 1.25rem;
         }
 
-        .sno {
-            font-weight: 700;
+        .members-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
             color: var(--accent);
-            opacity: 0.5;
-        }
-
-        @media (max-width: 768px) {
-            .member-grid {
-                grid-template-columns: 1fr;
-            }
+            font-weight: bold;
         }
     </style>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/ticker-data.js" defer></script>
+    <script src="js/footer-data.js" defer></script>
+    <script src="js/dates-data.js" defer></script>
+    <script src="js/nav-data.js" defer></script>
+    <script src="js/modern.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Top News Ticker -->
     <div id="ticker-placeholder"></div>
+    <nav id="nav-placeholder" class="modern-nav"></nav>
 
-    <!-- Header -->
     <header class="committee-header">
-        <div class="container mx-auto">
+        <div class="container">
             <h1 class="conference-title">Organizing Committee</h1>
-            <p class="conference-subtitle">The visionary leadership behind I3CSET-2026</p>
+            <p class="conference-subtitle">The visionary leadership behind I3CEET-2027</p>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav id="nav-placeholder" class="modern-nav glass-effect"></nav>
-
-    <div class="container mx-auto px-4 max-w-7xl py-12">
+    <div class="container py-16">
 
         <!-- Chief Patrons & Patrons -->
-        <h2 class="category-title">Chief Patrons & Patrons</h2>
-        <div class="member-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-            <div class="member-card">
-                <div class="member-img-wrapper">
-                    <img src="images/organizing/Shri Suneel Galgotia.webp" alt="Shri Suneel Galgotia">
+        <div class="category-container">
+            <h2 class="section-title">CHIEF PATRONS & PATRONS</h2>
+            <div class="member-grid">
+                <div class="member-card">
+                    <div class="member-img-wrapper"><img src="images/organizing/Shri Suneel Galgotia.webp" alt="Shri Suneel Galgotia"></div>
+                    <div class="member-role">Chairman</div>
+                    <div class="member-name">Shri Suneel Galgotia</div>
+                    <div class="member-org">Galgotias Educational Institutions, Greater Noida</div>
                 </div>
-                <div class="member-role">Chairman</div>
-                <div class="member-name">Shri Suneel Galgotia</div>
-                <div class="member-org">Galgotias Educational Institutions<br>Greater Noida</div>
-            </div>
-            <div class="member-card">
-                <div class="member-img-wrapper">
-                    <img src="images/organizing/Dr. Dhruv Galgotia.webp" alt="Dr. Dhruv Galgotia">
+                <div class="member-card">
+                    <div class="member-img-wrapper"><img src="images/organizing/Dr. Dhruv Galgotia.webp" alt="Dr. Dhruv Galgotia"></div>
+                    <div class="member-role">CEO</div>
+                    <div class="member-name">Dr. Dhruv Galgotia</div>
+                    <div class="member-org">Galgotia Educational Institutions, Greater Noida</div>
                 </div>
-                <div class="member-role">CEO</div>
-                <div class="member-name">Dr. Dhruv Galgotia</div>
-                <div class="member-org">Galgotia Educational Institutions<br>Greater Noida</div>
-            </div>
-            <div class="member-card">
-                <div class="member-img-wrapper">
-                    <img src="images/organizing/Prof. (Dr.) Brijesh Singh.jpeg" alt="Prof. (Dr.) Brijesh Singh">
+                <div class="member-card">
+                    <div class="member-img-wrapper"><img src="images/organizing/Prof. (Dr.) Brijesh Singh.jpeg" alt="Prof. (Dr.) Brijesh Singh"></div>
+                    <div class="member-role">Director</div>
+                    <div class="member-name">Prof. (Dr.) Brijesh Singh</div>
+                    <div class="member-org">Galgotias College of Engineering and Technology (GCET)</div>
                 </div>
-                <div class="member-role">Director</div>
-                <div class="member-name">Prof. (Dr.) Brijesh Singh</div>
-                <div class="member-org">Galgotias College of Engineering and Technology<br>(GCET), Greater Noida</div>
             </div>
         </div>
 
         <!-- Organizing Chair -->
-        <h2 class="category-title">Convenir & Organizing Chair</h2>
-        <div class="member-grid" style="justify-content: center; display: flex;">
-            <div class="member-card" style="max-width: 400px;">
-                <div class="member-img-wrapper">
-                    <img src="images/organizing/Dr.-Amrita-Rai.png" alt="Dr. Amrita Rai">
+        <div class="category-container">
+            <h2 class="section-title">CONVENIR & ORGANIZING CHAIR</h2>
+            <div class="member-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="member-card">
+                    <div class="member-img-wrapper"><img src="images/organizing/Dr.-Amrita-Rai.png" alt="Dr. Amrita Rai"></div>
+                    <div class="member-role">Convenir</div>
+                    <div class="member-name">Dr. Amrita Rai</div>
+                    <div class="member-org">Galgotias College of Engineering and Technology (GCET)</div>
                 </div>
-                <div class="member-role">Convenir</div>
-                <div class="member-name">Dr. Amrita Rai</div>
-                <div class="member-org">Galgotias College of Engineering and Technology<br>(GCET), Greater Noida</div>
-            </div>
-
-            <div class="member-card" style="max-width: 400px;">
-                <div class="member-img-wrapper">
-                    <img src="images/organizing/Dr. R. L. Yadav.jpeg" alt="Dr. R. L. Yadav">
+                <div class="member-card">
+                    <div class="member-img-wrapper"><img src="images/organizing/rl sir.jpeg" alt="Dr. R. L. Yadav"></div>
+                    <div class="member-role">Organizing Chair</div>
+                    <div class="member-name">Dr. R. L. Yadav</div>
+                    <div class="member-org">Galgotias College of Engineering and Technology (GCET)</div>
                 </div>
-                <div class="member-role">Organizing Chair</div>
-                <div class="member-name">Dr. R. L. Yadav</div>
-                <div class="member-org">Galgotias College of Engineering and Technology<br>(GCET), Greater Noida</div>
             </div>
         </div>
 
         <!-- Organizing Team -->
-        <h2 class="category-title">Organizing Team Members</h2>
-
-        <!-- Row 1: 4 Members -->
-        <div class="member-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-            <div class="member-card">
-                <div class="member-img-wrapper"><img src="images/organizing/Dr-Monika-Bhatnagar_ECE.jpeg"
-                        alt="Dr. Monika Bhatnagar"></div>
-                <div class="member-name">Dr. Monika Bhatnagar</div>
-                <div class="member-org">Assoc. Prof. Department of EC<br>GCET, Greater Noida</div>
-            </div>
-            <div class="member-card">
-                <div class="member-img-wrapper"><img src="images/organizing/Jaspreet-Kaur.jpg" alt="Dr. Jaspreet Kaur">
+        <div class="category-container">
+            <h2 class="section-title">ORGANIZING TEAM</h2>
+            <div class="member-grid">
+                <div class="member-card">
+                    <div class="member-img-wrapper"><img src="images/organizing/Dr-Monika-Bhatnagar_ECE.jpeg" alt="Dr. Monika Bhatnagar"></div>
+                    <div class="member-name">Dr. Monika Bhatnagar</div>
+                    <div class="member-org">Assoc. Prof. Department of EC, GCET</div>
                 </div>
-                <div class="member-name">Dr. Jaspreet Kaur</div>
-                <div class="member-org">Professor, Department of EC<br>GCET, Greater Noida</div>
-            </div>
-            <div class="member-card">
-                <div class="member-img-wrapper"><img src="images/organizing/Anil-Kumar-Sethi.jpg" alt="Dr. A.K. Sethi">
+                <div class="member-card">
+                    <div class="member-img-wrapper"><img src="images/organizing/Jaspreet-Kaur.jpg" alt="Dr. Jaspreet Kaur"></div>
+                    <div class="member-name">Dr. Jaspreet Kaur</div>
+                    <div class="member-org">Professor, Department of EC, GCET</div>
                 </div>
-                <div class="member-name">Dr. A.K. Sethi</div>
-                <div class="member-org">Professor, Department of ME<br>GCET, Greater Noida</div>
-            </div>
-            <div class="member-card">
-                <div class="member-img-wrapper"><img src="images/organizing/DR-SHILPEE_ECE.jpg" alt="Dr. Shilpee Patil">
+                <div class="member-card">
+                    <div class="member-img-wrapper"><img src="images/organizing/Anil-Kumar-Sethi.jpg" alt="Dr. A.K. Sethi"></div>
+                    <div class="member-name">Dr. A.K. Sethi</div>
+                    <div class="member-org">Professor, Department of ME, GCET</div>
                 </div>
-                <div class="member-name">Dr. Shilpee Patil</div>
-                <div class="member-org">Assoc. Prof. Department of EC<br>GCET, Greater Noida</div>
-            </div>
-        </div>
-
-        <!-- Row 2: 2 Members Centered -->
-        <div class="member-grid"
-            style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 2rem; gap: 2rem;">
-
-            <div class="member-card" style="flex: 0 1 300px;">
-                <div class="member-img-wrapper"><img src="images/organizing/Mr. Amanpreet Singh Saini.webp"
-                        alt="Mr. Amanpreet Singh Saini"></div>
-                <div class="member-name">Mr. Amanpreet Singh Saini</div>
-                <div class="member-org">Asst. Prof. Department of EC<br>GCET, Greater Noida</div>
-            </div>
-            <div class="member-card" style="flex: 0 1 300px;">
-                <div class="member-img-wrapper"><img src="images/organizing/Alok-Kumar_ECE.jpg" alt="Mr. Alok Kumar">
+                <div class="member-card">
+                    <div class="member-img-wrapper"><img src="images/organizing/DR-SHILPEE_ECE.jpg" alt="Dr. Shilpee Patil"></div>
+                    <div class="member-name">Dr. Shilpee Patil</div>
+                    <div class="member-org">Assoc. Prof. Department of EC, GCET</div>
                 </div>
-                <div class="member-name">Mr. Alok Kumar</div>
-                <div class="member-org">Asst. Prof. Department of EC<br>GCET, Greater Noida</div>
+                <div class="member-card">
+                    <div class="member-img-wrapper"><img src="images/organizing/Mr. Amanpreet Singh Saini.webp" alt="Mr. Amanpreet Singh Saini"></div>
+                    <div class="member-name">Mr. Amanpreet Singh Saini</div>
+                    <div class="member-org">Asst. Prof. Department of EC, GCET</div>
+                </div>
+                <div class="member-card">
+                    <div class="member-img-wrapper"><img src="images/organizing/Alok-Kumar_ECE.jpg" alt="Mr. Alok Kumar"></div>
+                    <div class="member-name">Mr. Alok Kumar</div>
+                    <div class="member-org">Asst. Prof. Department of EC, GCET</div>
+                </div>
             </div>
         </div>
 
         <!-- Student Team -->
-        <h2 class="category-title">Student Organizing Team</h2>
-        <div class="member-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-            <div class="member-card">
-                <div class="member-img-wrapper"><img src="images/organizing/yuvraj.jpg" alt="Mr. Yuvraj Singh"></div>
-                <div class="member-role">Student Lead</div>
-                <div class="member-name">Mr. Yuvraj Singh</div>
-                <div class="member-org">Student of ECE (Final Year)<br>GCET, Greater Noida</div>
+        <div class="category-container">
+            <h2 class="section-title">STUDENT ORGANIZING TEAM</h2>
+            <div class="member-grid">
+                <div class="member-card">
+                    <div class="member-img-wrapper"><img src="images/organizing/yuvraj.jpg" alt="Mr. Yuvraj Singh"></div>
+                    <div class="member-role">Student Lead</div>
+                    <div class="member-name">Mr. Yuvraj Singh</div>
+                    <div class="member-org">Student of ECE (Final Year), GCET</div>
+                </div>
+                <div class="member-card">
+                    <div class="member-img-wrapper"><img src="images/organizing/vasu.jpg" alt="Mr. Vasu Pandey"></div>
+                    <div class="member-role">Student Lead</div>
+                    <div class="member-name">Mr. Vasu Pandey</div>
+                    <div class="member-org">Student of ECE (Final Year), GCET</div>
+                </div>
             </div>
-            <div class="member-card" style="min-width: 320px;">
-                <div class="member-img-wrapper"><img src="images/organizing/vasu.jpg" alt="Mr. Vasu Pandey"></div>
-                <div class="member-role">Student Lead</div>
-                <div class="member-name">Mr. Vasu Pandey</div>
-                <div class="member-org">Student of ECE (Final Year)<br>GCET, Greater Noida</div>
-            </div>
-        </div>
-
-        <!-- Roles & Responsibilities Section -->
-        <div class="roles-container">
-            <h2 class="section-title"><i class="fa fa-tasks"></i> ROLES AND RESPONSIBILITIES</h2>
-            <p style="margin-bottom: 2rem; color: var(--text-muted); font-size: 0.95rem;">
-                The execution of <strong>I3CSET-2026</strong> is managed by the following dedicated functional
-                committees:
-            </p>
-            <table class="roles-table">
-                <thead>
-                    <tr>
-                        <th style="width: 50px;">S.No</th>
-                        <th>Committee</th>
-                        <th>Role / Responsibility</th>
-                        <th>Members</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="sno">1</td>
-                        <td style="font-weight: 700;">Technical Program</td>
-                        <td>Reviews papers, ensures academic quality</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Dr. Monika Bhatnagar</li>
-                                <li>Dr. Jaspreet Kaur</li>
-                                <li>Dr. Richa</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sno">2</td>
-                        <td style="font-weight: 700;">Publication</td>
-                        <td>Coordinates with publishers/journals for proceedings</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Dr. Anil Kr Sethi</li>
-                                <li>Mr. Amanpreet Singh Saini</li>
-                                <li>Dr. Shilpee Patil</li>
-                                <li>Mr. Alok Kumar</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sno">3</td>
-                        <td style="font-weight: 700;">Review Committee</td>
-                        <td>Assigns reviewers and maintains quality control</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Dr. Praveen Kumar</li>
-                                <li>Dr. Maksud Alam</li>
-                                <li>Dr. Kuldeep Singh</li>
-                                <li>Dr. Arun Rana</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sno">4</td>
-                        <td style="font-weight: 700;">Session/Track Chairs</td>
-                        <td>Manage individual tracks and sessions</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Mr. Amit Gupta, Dr. Devraj</li>
-                                <li>Dr. Neha Niharika, Dr. Ankur Utsav</li>
-                                <li>Dr. Vivek Kumar, Ms. Ravinder Kaur</li>
-                                <li>Dr. Md Sulaiman, Dr. R K Jaiswal</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sno">5</td>
-                        <td style="font-weight: 700;">Finance</td>
-                        <td>Manages budget and accounts</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Mr. Amanpreet Singh Saini</li>
-                                <li>Dr. Akhilesh Panchal</li>
-                                <li>Dr. Avinash Kaushal Awasthi</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sno">6</td>
-                        <td style="font-weight: 700;">Registration</td>
-                        <td>Handles registration, fees, and certificates</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Dr. Shahid Eqbal</li>
-                                <li>Dr. Sachin Kumar</li>
-                                <li>Dr. Amit Kumar Singh</li>
-                                <li>Ms. Nahid Malik</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sno">7</td>
-                        <td style="font-weight: 700;">Hospitality</td>
-                        <td>Guest reception, lodging, travel, and food</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Ms. Sakshi Mittal</li>
-                                <li>Mr. Deependra Sinha</li>
-                                <li>Dr. Shahid Eqbal, Dr. R. K. Jaiswal</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sno">8</td>
-                        <td style="font-weight: 700;">Logistics</td>
-                        <td>Venue, seating, IT setup, and transport</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Dr. Ashish Pandey</li>
-                                <li>Dr. Akhilesh Panchal</li>
-                                <li>Dr. Amit Kumar Singh</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sno">9</td>
-                        <td style="font-weight: 700;">Sponsorship</td>
-                        <td>Coordinates industry exhibitions and funds</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Mr. Naresh Kumar</li>
-                                <li>Dr. Ashish Gupta</li>
-                                <li>Dr. Apoorva Dwivedi</li>
-                                <li>Dr. Vivek Kumar</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sno">10</td>
-                        <td style="font-weight: 700;">Publicity & Media</td>
-                        <td>Promotes event via socials and media</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Dr. Shilpi, Ms. Shikha Mishra</li>
-                                <li>Dr. Pankaj Binda, Mr. Gavendra Singh</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sno">11</td>
-                        <td style="font-weight: 700;">Website & IT</td>
-                        <td>Manages site, portal, and digital platforms</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Mr. Alok Kumar</li>
-                                <li>Dr. Pankaj Binda</li>
-                                <li>Dr. Ankita Rani</li>
-                                <li>Dr. Raghwendra K. Singh</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sno">12</td>
-                        <td style="font-weight: 700;">Events</td>
-                        <td>Organizes inaugural/cultural activities</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Dr. Apoorva Dwivedi</li>
-                                <li>Ms. Deeksha Sankrit</li>
-                                <li>Ms. Shikha Mishra, Dr. Shilpi</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sno">13</td>
-                        <td style="font-weight: 700;">Volunteer Committee</td>
-                        <td>Student coordinators for ground assistance</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Dr. Ankur Utsav</li>
-                                <li>Dr. Neha Niharika</li>
-                                <li>Mr. Gavendra Singh, Ms. Deeksha Sankrit</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="sno">14</td>
-                        <td style="font-weight: 700;">Local Arrangement</td>
-                        <td>Ensures smooth execution at venue</td>
-                        <td>
-                            <ul class="members-list">
-                                <li>Dr. Raghwendra K Singh</li>
-                                <li>Dr. Ankita Rani</li>
-                                <li>Dr. Deependra Sinha</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
 
     </div>
 
-    <!-- Footer -->
+    <!-- Roles & Responsibilities -->
+    <section class="roles-section">
+        <div class="container">
+            <h2 class="section-title">ROLES & RESPONSIBILITIES</h2>
+            <div class="table-wrapper">
+                <table class="roles-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 80px;">S.No</th>
+                            <th>Committee</th>
+                            <th>Responsibility</th>
+                            <th>Members</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td style="font-weight: 700;">Technical Program</td>
+                            <td>Reviews papers, ensures academic quality</td>
+                            <td>
+                                <ul class="members-list">
+                                    <li>Dr. Monika Bhatnagar, Dr. Jaspreet Kaur, Dr. Richa</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td style="font-weight: 700;">Publication</td>
+                            <td>Coordinates with publishers/journals for proceedings</td>
+                            <td>
+                                <ul class="members-list">
+                                    <li>Dr. Anil Kr Sethi, Mr. Amanpreet Singh Saini, Dr. Shilpee Patil, Mr. Alok Kumar</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td style="font-weight: 700;">Review Committee</td>
+                            <td>Assigns reviewers and maintains quality control</td>
+                            <td>
+                                <ul class="members-list">
+                                    <li>Dr. Praveen Kumar, Dr. Maksud Alam, Dr. Kuldeep Singh, Dr. Arun Rana</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td style="font-weight: 700;">Finance</td>
+                            <td>Manages budget and accounts</td>
+                            <td>
+                                <ul class="members-list">
+                                    <li>Mr. Amanpreet Singh Saini, Dr. Akhilesh Panchal, Dr. Avinash Kaushal Awasthi</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td style="font-weight: 700;">Registration</td>
+                            <td>Handles registration, fees, and certificates</td>
+                            <td>
+                                <ul class="members-list">
+                                    <li>Dr. Shahid Eqbal, Dr. Sachin Kumar, Dr. Amit Kumar Singh, Ms. Nahid Malik</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td style="font-weight: 700;">Logistics</td>
+                            <td>Venue, seating, IT setup, and transport</td>
+                            <td>
+                                <ul class="members-list">
+                                    <li>Dr. Ashish Pandey, Dr. Akhilesh Panchal, Dr. Amit Kumar Singh</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td style="font-weight: 700;">Website & IT</td>
+                            <td>Manages site, portal, and digital platforms</td>
+                            <td>
+                                <ul class="members-list">
+                                    <li>Mr. Alok Kumar, Dr. Pankaj Binda, Dr. Ankita Rani, Dr. Raghwendra K. Singh</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
     <div id="footer-placeholder"></div>
 
 </body>

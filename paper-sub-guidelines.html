@@ -4,26 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submission Guidelines | I3CSET-2026</title>
+    <title>Submission Guidelines | I3CEET-2027</title>
 
     <!-- Meta SEO -->
-    <meta name="keywords"
-        content="I3CSET-2026, Paper Submission, Guidelines, Call for Papers, Conference Publication, Taylor & Francis">
-    <meta name="description" content="Key dates and deadlines for I3CSET-2026 conference.">
+    <meta name="keywords" content="I3CEET-2027, Paper Submission, Guidelines, Call for Papers, Conference Publication, IEEE">
+    <meta name="description" content="Key dates and deadlines for I3CEET-2027 conference.">
 
-    <script>
-        if (localStorage.getItem('theme') === 'light') {
-            document.documentElement.classList.add('light-mode');
-            document.addEventListener('DOMContentLoaded', () => document.body.classList.add('light-mode'));
-        }
-    </script>
-    <script src="js/ticker-data.js" defer></script>
-    <script src="js/footer-data.js" defer></script>
-    <script src="js/dates-data.js" defer></script>
-    <script src="js/nav-data.js" defer></script>
-    <script src="js/modern.js" defer></script>
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
@@ -31,279 +19,196 @@
     <link rel="stylesheet" href="css/modern.css">
 
     <style>
-        .glass-effect {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        #news-ticker-container {
-            background: var(--primary);
-            color: var(--text);
-            padding: 8px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-            z-index: 1001;
-            border-bottom: 1px solid var(--glass-border);
-        }
-
-        .ticker-content {
-            display: inline-block;
-            padding-left: 100%;
-            animation: ticker 30s linear infinite;
-        }
-
-        .ticker-item {
-            display: inline-block;
-            margin-right: 50px;
-            font-weight: 500;
-        }
-
-        @keyframes ticker {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
         .page-header {
-            background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('images/hotel1-banner.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 4rem 2rem;
+            background-color: var(--section-bg);
+            padding: 4rem 0;
             text-align: center;
-            border-bottom: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--border);
         }
 
-        .guideline-section {
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            border-radius: 16px;
+        .guideline-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
             transition: var(--transition);
         }
 
-        .guideline-section:hover {
+        .guideline-card:hover {
             border-color: var(--accent);
-            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
         }
 
-        .guideline-section h2 {
+        .guideline-card h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             gap: 1rem;
-            color: var(--text);
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 0.5rem;
-            display: inline-flex;
         }
 
-        .guideline-section p,
-        .guideline-section li {
-            font-size: 1rem;
+        .guideline-card h2 i {
+            color: var(--accent);
+            font-size: 1.25rem;
+        }
+
+        .guideline-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
             line-height: 1.7;
-            color: var(--text);
-            margin-bottom: 1rem;
         }
 
-        .guideline-section ul {
-            list-style: none;
-            padding-left: 0;
+        .guideline-item i {
+            color: #10b981;
+            margin-top: 0.35rem;
+            font-size: 0.9rem;
         }
 
-        .guideline-section ul li {
-            position: relative;
-            padding-left: 1.5rem;
+        .cmt-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
-        .guideline-section ul li::before {
-            content: '\f105';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            color: var(--accent);
+        .resource-btn-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
         }
 
-        .download-btn {
-            display: inline-flex;
+        .resource-btn {
+            display: flex;
             align-items: center;
-            gap: 0.75rem;
-            background: rgba(220, 38, 38, 0.1);
-            color: var(--accent);
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
             text-decoration: none;
-            border: 1px solid var(--accent);
+            color: #1e3a8a;
+            font-weight: 700;
             transition: var(--transition);
-            margin-right: 1rem;
-            margin-bottom: 1rem;
         }
 
-        .download-btn:hover {
-            background: var(--accent);
-            color: white;
-        }
-
-        .important-note {
-            background: rgba(16, 185, 129, 0.1);
-            border-left: 4px solid var(--secondary);
-            padding: 1.5rem;
-            border-radius: 0 12px 12px 0;
-            margin: 2rem 0;
+        .resource-btn:hover {
+            border-color: var(--accent);
+            background: #f8fafc;
         }
     </style>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/ticker-data.js" defer></script>
+    <script src="js/footer-data.js" defer></script>
+    <script src="js/dates-data.js" defer></script>
+    <script src="js/nav-data.js" defer></script>
+    <script src="js/modern.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Top News Ticker -->
     <div id="ticker-placeholder"></div>
+    <nav id="nav-placeholder" class="modern-nav"></nav>
 
-    <!-- Page Header -->
     <header class="page-header">
-        <div class="container mx-auto">
+        <div class="container">
             <h1 class="conference-title">Submission Guidelines</h1>
-            <p class="conference-subtitle">Everything you need to know for your I3CSET-2026 contribution</p>
+            <p class="conference-subtitle">Everything you need to know for your I3CEET-2027 contribution</p>
         </div>
     </header>
 
-    <!-- Sticky Navigation -->
-    <nav id="nav-placeholder" class="modern-nav glass-effect"></nav>
+    <div class="container py-16">
+        
+        <div class="cmt-box">
+            <h2 style="color: #1e3a8a; font-weight: 800; margin-bottom: 1rem;">Ready to submit?</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">All papers must be submitted electronically through the Microsoft CMT portal.</p>
+            <a href="https://cmt3.research.microsoft.com/ICCCSET2026/" target="_blank" class="btn btn-primary btn-lg">Submit via Microsoft CMT</a>
+        </div>
 
-    <!-- Main Content Area -->
-    <div class="important-note">
-        <p><strong>Note:</strong> Proposals for Special Sessions/Tracks are warmly invited. Please contact the
-            organizing committee for early expressions of interest.</p>
-    </div>
-    <div class="main-content container mx-auto px-4 max-w-7xl">
+        <div class="main-content">
+            <main>
+                <section class="guideline-card">
+                    <h2><i class="fa fa-file-contract"></i> Originality & Scope</h2>
+                    <div class="guideline-item">
+                        <i class="fa fa-check"></i>
+                        <span>Manuscripts must be original, unpublished, and not under consideration elsewhere.</span>
+                    </div>
+                    <div class="guideline-item">
+                        <i class="fa fa-check"></i>
+                        <span>Significant and novel contributions relevant to conference themes are required.</span>
+                    </div>
+                    <div style="margin-top: 1rem; padding: 1rem; background: #fef2f2; border-left: 4px solid #ef4444; border-radius: 0.25rem; font-size: 0.9rem; color: #b91c1c;">
+                        <strong>Plagiarism Alert:</strong> Exceeding 20% similarity (iThenticate) may lead to immediate rejection.
+                    </div>
+                </section>
 
-        <main class="content-area">
+                <section class="guideline-card">
+                    <h2><i class="fa fa-align-left"></i> Formatting Requirements</h2>
+                    <div class="guideline-item">
+                        <i class="fa fa-check"></i>
+                        <span>Maximum length: <strong>5 pages</strong> (including figures and references).</span>
+                    </div>
+                    <div class="guideline-item">
+                        <i class="fa fa-check"></i>
+                        <span>Template: Must follow the official <strong>IEEE</strong> conference format.</span>
+                    </div>
+                    <div class="guideline-item">
+                        <i class="fa fa-check"></i>
+                        <span>Language: All manuscripts must be in professional English.</span>
+                    </div>
+                </section>
+            </main>
 
-            <section class="guideline-section">
-                <h2><i class="fa fa-paper-plane"></i> Submission Process</h2>
-                <p>All papers must be submitted electronically through <strong>Microsoft CMT</strong>. Submissions must
-                    include necessary details such as paper ID and title, author names, affiliations, and contact
-                    information.</p>
-                <a href="https://cmt3.research.microsoft.com/ICCCSET2026/" target="_blank" class="download-btn">
-                    <i class="fa fa-external-link-alt"></i> Submit via Microsoft CMT
-                </a>
-            </section>
-            <section class="guideline-section">
-                <h2><i class="fa fa-cloud-upload-alt"></i> Originality and Scope</h2>
-                <p>All submitted manuscripts must be <strong>original, unpublished</strong>, and not under consideration
-                    for publication elsewhere. Manuscripts should present significant and novel contributions to the
-                    field relevant to the conference themes.</p>
-                <div
-                    style="margin-top: 1rem; padding: 1rem; background: rgba(239, 68, 68, 0.1); border-radius: 8px; border: 1px solid #ef4444;">
-                    <p style="margin:0; font-size:0.9rem; color:#fca5a5;"><i class="fa fa-exclamation-triangle"></i>
-                        Plagiarism exceeding 20% (iThenticate) may lead to immediate rejection.</p>
-                </div>
-            </section>
+            <aside>
+                <section class="section-card">
+                    <h3 class="section-title" style="font-size: 1.5rem;">PAPER RESOURCES</h3>
+                    <div class="resource-btn-group" style="grid-template-columns: 1fr;">
+                        <a href="resources/Submission_Format_Doc.zip" class="resource-btn">
+                            <i class="fa fa-file-word"></i>
+                            <span>Word Template</span>
+                        </a>
+                        <a href="resources/copyright_form.docx" class="resource-btn">
+                            <i class="fa fa-file-contract"></i>
+                            <span>Copyright Form</span>
+                        </a>
+                        <a href="resources/presentation_slide.pptx" class="resource-btn">
+                            <i class="fa fa-file-powerpoint"></i>
+                            <span>Slide Template</span>
+                        </a>
+                    </div>
+                </section>
 
-            <section class="guideline-section">
-                <h2><i class="fa fa-file-signature"></i> Manuscript Length and Format</h2>
-                <ul>
-                    <li>The maximum manuscript length is <strong>5 pages</strong>, including figures, tables, and
-                        references. Additional pages may be included for an extra fee.</li>
-                    <li>Authors must prepare their manuscripts according to the <strong>Taylor & Francis</strong>
-                        conference template, which can be downloaded below.</li>
-                    <li>Manuscripts must be formatted in English, using clear and concise language.</li>
-                </ul>
-            </section>
+                <section class="section-card">
+                    <h3 class="section-title" style="font-size: 1.5rem;">CONTACT</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                        Technical questions regarding submission should be directed to the program chairs.<br><br>
+                        <strong>Dr. RL Yadava</strong><br>
+                        +91-9412414856
+                    </p>
+                </section>
+            </aside>
+        </div>
 
-            <section class="guideline-section">
-                <h2><i class="fa fa-check-double"></i> Camera-Ready Submission</h2>
-                <p>Upon acceptance, authors must submit a camera-ready version of their manuscript by the specified
-                    deadline, incorporating reviewers’ comments and strictly following the Taylor & Francis formatting
-                    requirements.</p>
-            </section>
-
-            <section class="guideline-section">
-                <h2><i class="fa fa-presentation-screen"></i> Presentation Requirement</h2>
-                <p>At least one author must register for the conference and present the paper (in person or virtually).
-                    <strong>Failure to present may lead to exclusion of the paper from the proceedings.</strong>
-                </p>
-            </section>
-        </main>
-
-        <aside class="sidebar">
-            <section class="guideline-section" id="resources">
-                <h2><i class="fa fa-download"></i> Resources & Templates</h2>
-                <p>Download the official templates and forms required for your manuscript:</p>
-                <div style="flex-wrap: wrap; display: flex;">
-                    <a href="resources/Submission_Format_Doc.zip" class="download-btn"><i class="fa fa-file-word"></i>
-                        Word Template</a>
-                    <a href="resources/copyright_form.docx" class="download-btn"><i class="fa fa-file-signature"></i>
-                        Copyright Form</a>
-                    <a href="resources/presentation_slide.pptx" class="download-btn"><i
-                            class="fa fa-file-powerpoint"></i> Presentation Template</a>
-                    <a href="resources/Sample.pdf" class="download-btn"><i class="fa fa-file-pdf"></i> Sample Paper</a>
-                </div>
-            </section>
-
-            <section class="guideline-section">
-                <h2><i class="fa fa-book"></i> Publication</h2>
-                <p>Accepted papers will be published in the <strong>Taylor & Francis conference proceedings
-                        series</strong> and submitted for indexing in Scopus and Web of Science.
-                </p>
-            </section>
-
-            <section class="guideline-section">
-                <h2><i class="fa fa-gavel"></i> Ethical Considerations</h2>
-                <ul>
-                    <li>Authors must adhere to ethical guidelines, including proper citation of prior work and avoiding
-                        duplicate publication.</li>
-                    <li>Any <strong>conflicts of interest</strong> must be disclosed during the submission process.</li>
-                </ul>
-            </section>
-
-            <section class="guideline-section" id="support">
-                <h2><i class="fa fa-envelope"></i> Support</h2>
-                <p>Technical questions regarding submission should be directed to the program chairs.</p>
-                <p>Email: i3cset2026@galgotiacollege.edu</p>
-                <p>Phone Number: +91-9412414856 (Dr. RL Yadava)</p>
-                <a href="mailto:i3cset2026@galgotiacollege.edu" class="download-btn"
-                    style="width: 100%; justify-content: center; margin: 0;">
-                    <i class="fa fa-envelope"></i> Contact Committee
-                </a>
-            </section>
-        </aside>
-
-    </div>
-
-    <!-- Wide Acknowledgment Section -->
-    <div class="container mx-auto px-4 max-w-7xl mb-12">
-        <section class="guideline-section" style="margin-bottom: 0;">
-            <h2 style="font-size: 1.25rem;"><i class="fa fa-handshake"></i> ACKNOWLEDGMENT</h2>
-            <p style="font-style: italic; font-size: 0.95rem; opacity: 0.8; line-height: 1.6;">
-                The <strong>Microsoft CMT</strong> service was used for managing the peer-reviewing process for this
-                conference. This service was provided for free by Microsoft and they bore all expenses, including costs
-                for Azure cloud services as well as for software development and support.
+        <section class="section-card" style="margin-top: 4rem; background: #fafafa; border: 1px solid #eee;">
+            <h3 style="font-size: 1.15rem; color: #1e3a8a; font-weight: 800; margin-bottom: 1rem;">ACKNOWLEDGMENT</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); font-style: italic; line-height: 1.6;">
+                The <strong>Microsoft CMT</strong> service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
             </p>
         </section>
+
     </div>
 
-    <!-- Footer -->
     <div id="footer-placeholder"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#news-ticker-container').hover(function () {
-                $('.ticker-content').css('animation-play-state', 'paused');
-            }, function () {
-                $('.ticker-content').css('animation-play-state', 'running');
-            });
-        });
-    </script>
 </body>
 
 </html>

@@ -4,455 +4,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I3CSET-2026 | 2nd International Conference on Computing, Communication and Sustainable Energy Technologies
-    </title>
+    <title>I3CEET-2027 | IEEE Style Conference</title>
 
     <!-- Meta SEO -->
     <meta name="keywords"
-        content="I3CSET-2026, Conference, Computing, Communication, Sustainable Energy Technologies, GCET, Greater Noida, India">
+        content="I3CEET-2027, Conference, Computing, Communication, Energy Efficiency Technologies, GCET, Greater Noida, India">
     <meta name="description"
-        content="2nd International Conference on Computing, Communication and Sustainable Energy Technologies (I3CSET-2026) at Galgotias College of Engineering and Technology, Greater Noida.">
+        content="2nd International Conference on Computing, Communication and Energy Efficiency Technologies (I3CEET-2027) at Galgotias College of Engineering and Technology, Greater Noida.">
 
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/modern.css">
 
+    <style>
+        /* Modern Enhancements for Index Page */
+        .hero-section {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('images/hero-bg.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .track-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .track-card {
+            background: white;
+            padding: 2rem 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .track-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .track-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .track-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+
+        .welcome-text {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 5px solid var(--accent);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+        }
+    </style>
+
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // Check for theme immediately to prevent flashing
-        if (localStorage.getItem('theme') === 'light') {
-            document.documentElement.classList.add('light-mode');
-            document.addEventListener('DOMContentLoaded', () => document.body.classList.add('light-mode'));
-        }
-    </script>
     <script src="js/ticker-data.js" defer></script>
     <script src="js/footer-data.js" defer></script>
     <script src="js/dates-data.js" defer></script>
     <script src="js/nav-data.js" defer></script>
     <script src="js/modern.js" defer></script>
-    <style>
-        /* Extra visual flourishes */
-        .glass-effect {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .glow-hover:hover {
-            box-shadow: 0 0 20px var(--accent-glow);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Modern Ticker styling */
-        #news-ticker-container {
-            background: var(--primary);
-            color: var(--text);
-            padding: 8px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-            z-index: 1001;
-            border-bottom: 1px solid var(--glass-border);
-        }
-
-        .ticker-content {
-            display: inline-block;
-            padding-left: 100%;
-            animation: ticker 30s linear infinite;
-        }
-
-        .ticker-item {
-            display: inline-block;
-            margin-right: 50px;
-            font-weight: 500;
-        }
-
-        .ticker-item i {
-            color: var(--accent);
-            margin-right: 8px;
-        }
-
-        .ticker-item a {
-            color: var(--secondary);
-            text-decoration: none;
-        }
-
-        .ticker-item a:hover {
-            text-decoration: underline;
-        }
-
-        @keyframes ticker {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        /* Hero refinement */
-        .hero-logo {
-            width: 180px;
-            margin-bottom: 2rem;
-            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-        }
-
-        /* Sidebar layout consistency */
-        .main-content {
-            margin-top: 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .content-area {
-            flex: 3;
-            min-width: 300px;
-        }
-
-        .sidebar {
-            flex: 1;
-            min-width: 280px;
-        }
-
-        /* Welcome card */
-        .welcome-card {
-            border-left: 4px solid var(--accent);
-            padding-left: 1.5rem;
-        }
-
-        /* Cards for highlights */
-        .highlight-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .h-card {
-            background: var(--glass);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--glass-border);
-            transition: var(--transition);
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .h-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
-            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
-        }
-
-        .h-card i {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-
-        .h-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--text);
-        }
-
-        .h-card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        /* Horizontal Gallery Full Width */
-        .full-width-gallery {
-            width: 100%;
-            background: var(--glass);
-            border-top: 1px solid var(--glass-border);
-            border-bottom: 1px solid var(--glass-border);
-            padding: 3rem 0;
-            margin: 4rem 0;
-            overflow: hidden;
-        }
-
-        .gallery-wrapper {
-            width: 100%;
-            position: relative;
-        }
-
-        .gallery-track {
-            display: flex;
-            width: calc(400px * 22);
-            /* Increased size for full width feel */
-            animation: scroll 40s linear infinite;
-        }
-
-        .gallery-item {
-            width: 400px;
-            height: 250px;
-            padding: 0 1rem;
-            flex-shrink: 0;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            transition: var(--transition);
-            border: 2px solid transparent;
-        }
-
-        .gallery-item img:hover {
-            transform: scale(1.03) translateY(-10px);
-            border-color: var(--accent);
-            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
-        }
-
-        .gallery-track:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(calc(-400px * 11));
-            }
-        }
-
-        @media (max-width: 768px) {
-            .gallery-track {
-                width: calc(280px * 22);
-            }
-
-            .gallery-item {
-                width: 280px;
-                height: 180px;
-            }
-
-            @keyframes scroll {
-                0% {
-                    transform: translateX(0);
-                }
-
-                100% {
-                    transform: translateX(calc(-280px * 11));
-                }
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- Top News Ticker -->
+    <!-- News Ticker -->
     <div id="ticker-placeholder"></div>
 
-    <!-- Header / Hero Section -->
-    <header class="modern-header">
-        <div class="hero-content glass-effect">
-            <img src="images/I3CSET Logo.png" alt="I3CSET Logo" class="hero-logo">
-            <h1 class="conference-title">I3CSET-2026</h1>
-            <p class="conference-subtitle">2nd International Conference on Computing, Communication and Sustainable
-                Energy Technologies</p>
+    <!-- Sticky Navigation -->
+    <nav id="nav-placeholder" class="modern-nav"></nav>
+
+    <!-- Hero Section -->
+    <header class="modern-header hero-section">
+        <div class="container hero-content">
+            <img src="images/I3CEET Logo.png" alt="I3CEET Logo" style="width: 200px; margin-bottom: 2rem;">
+            <h1 class="conference-title">I3CEET-2027</h1>
+            <p class="conference-subtitle">2nd International Conference on Computing, Communication and Energy Efficiency
+                Technologies</p>
 
             <div class="quick-info">
-                <div class="info-item"><i class="fa fa-calendar-alt"></i> 30 Sept – 01 Oct, 2026</div>
-                <div class="info-item"><a href="https://maps.app.goo.gl/qdZw1YLJTKPo7xcTA" target="_blank"
-                        style="color: inherit; text-decoration: none;"><i class="fa fa-map-marker-alt"></i> Greater
-                        Noida, India</a></div>
-                <div class="info-item"><a href="https://maps.app.goo.gl/qdZw1YLJTKPo7xcTA" target="_blank"
-                        style="color: inherit; text-decoration: none;"><i class="fa fa-university"></i>
-                        GCET (Galgotias College)</a></div>
+                <div class="info-item"><i class="fa fa-calendar-alt"></i> 29–30 April 2027</div>
+                <div class="info-item"><i class="fa fa-map-marker-alt"></i> Greater Noida, India</div>
+                <div class="info-item"><i class="fa fa-university"></i> Galgotias College (GCET)</div>
             </div>
 
-            <div style="margin-top: 2.5rem; display: flex; gap: 1rem; justify-content: center;">
-                <button class="btn-primary glow-hover" onclick="location.href='paper-sub-guidelines.html';">Submit
-                    Paper</button>
-                <button class="btn-outline glow-hover" onclick="location.href='registration.html';">Register
-                    Now</button>
+            <div class="cta-group" style="flex-wrap: wrap;">
+                <a href="paper-sub-guidelines.html" class="btn btn-primary btn-lg">Submit Paper</a>
+                <a href="registration.html" class="btn btn-outline btn-lg">Register Now</a>
             </div>
         </div>
     </header>
 
-    <!-- Sticky Navigation -->
-    <nav id="nav-placeholder" class="modern-nav glass-effect"></nav>
-
     <!-- Main Content Area -->
-    <div class="main-content container mx-auto px-4 max-w-7xl">
+    <div class="container main-content mt-12">
 
-        <!-- Left Column: Welcome & About -->
-        <main class="content-area">
-            <section class="section-card welcome-card">
-                <h2 class="section-title"><i class="fa fa-handshake"></i> WELCOME TO I3CSET-2026</h2>
-                <div style="margin-top: 1rem;">
-                    <p style="font-size: 1.1rem; line-height: 1.8;">
-                        The <strong>2nd International Conference on Computing, Communication and Sustainable Energy
-                            Technologies (I3CSET-2026)</strong> will be held on <strong>30 September – 01 October
-                            2026</strong> at
-                        <strong>Galgotias College of Engineering and Technology (GCET)</strong>, Greater Noida, India.
+        <!-- Main Column -->
+        <main>
+            <section class="section-card">
+                <h2 class="section-title">WELCOME TO I3CEET-2027</h2>
+                <div class="welcome-text">
+                    <p>
+                        The <strong>2nd International Conference on Computing, Communication and Energy Efficiency
+                            Technologies (I3CEET-2027)</strong> will be held on <strong>29–30 April
+                            2027</strong> at <strong>Galgotias College of Engineering and Technology (GCET)</strong>,
+                        Greater Noida, India.
                     </p>
-                    <p style="margin-top: 1rem;">
-                        <a href="https://maps.app.goo.gl/qdZw1YLJTKPo7xcTA" target="_blank"
-                            style="color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-                            <i class="fa fa-map-marker-alt"></i> View on Google Maps
+
+                    <div class="highlight-box">
+                        <p>I3CEET-2027 provides a premier platform for researchers, academicians, and industry
+                            professionals to present and discuss recent advances in computing, communication, and
+                            energy efficiency technologies, fostering collaboration and innovation aligned with the
+                            conference themes.</p>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">
+                        <a href="https://maps.app.goo.gl/qdZw1YLJTKPo7xcTA" target="_blank" class="btn btn-outline"
+                            style="border-radius: 8px; padding: 0.5rem 1rem;">
+                            <i class="fa fa-map-location-dot"></i> View Location on Maps
                         </a>
                     </p>
-                    <br>
-                    <p>
-                        I3CSET-2026 provides a premier platform for researchers, academicians, and industry
-                        professionals to present and discuss recent advances in computing, communication, and
-                        sustainable energy technologies, fostering collaboration and innovation aligned with the
-                        conference themes.
-                    </p>
                 </div>
 
-                <div class="highlight-grid">
-                    <div class="h-card" onclick="location.href='technical-program.html';">
+                <div class="track-grid" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
+                    <div class="track-card" onclick="location.href='technical-program.html';">
                         <i class="fa fa-tower-broadcast"></i>
-                        <h3>Track 1</h3>
-                        <p>Communication & 6G</p>
+                        <h3>Communication & 6G</h3>
                     </div>
-                    <div class="h-card" onclick="location.href='technical-program.html';">
+                    <div class="track-card" onclick="location.href='technical-program.html';">
                         <i class="fa fa-image"></i>
-                        <h3>Track 2</h3>
-                        <p>Signal & Multimedia</p>
+                        <h3>Signal & Multimedia</h3>
                     </div>
-                    <div class="h-card" onclick="location.href='technical-program.html';">
+                    <div class="track-card" onclick="location.href='technical-program.html';">
                         <i class="fa fa-laptop-code"></i>
-                        <h3>Track 3</h3>
-                        <p>IoT & Embedded</p>
+                        <h3>IoT & Embedded</h3>
                     </div>
-                    <div class="h-card" onclick="location.href='technical-program.html';">
+                    <div class="track-card" onclick="location.href='technical-program.html';">
                         <i class="fa fa-satellite-dish"></i>
-                        <h3>Track 4</h3>
-                        <p>Antenna & Microwave</p>
+                        <h3>Antenna & Microwave</h3>
                     </div>
-                    <div class="h-card" onclick="location.href='technical-program.html';">
+                    <div class="track-card" onclick="location.href='technical-program.html';">
                         <i class="fa fa-shield-halved"></i>
-                        <h3>Track 5</h3>
-                        <p>Cyber & Blockchain</p>
+                        <h3>Cyber & Blockchain</h3>
                     </div>
-                    <div class="h-card" onclick="location.href='technical-program.html';">
+                    <div class="track-card" onclick="location.href='technical-program.html';">
                         <i class="fa fa-brain"></i>
-                        <h3>Track 6</h3>
-                        <p>AI & Data Science</p>
+                        <h3>AI & Data Science</h3>
                     </div>
-                    <div class="h-card" onclick="location.href='technical-program.html';">
+                    <div class="track-card" onclick="location.href='technical-program.html';">
                         <i class="fa fa-bolt-lightning"></i>
-                        <h3>Track 7</h3>
-                        <p>VLSI & Digital Circuits</p>
+                        <h3>VLSI & Digital Circuits</h3>
                     </div>
-                    <div class="h-card" onclick="location.href='technical-program.html';">
-                        <i class="fa fa-cloud"></i>
-                        <h3>Track 8</h3>
-                        <p>Cloud & Quantum</p>
-                    </div>
-                    <div class="h-card" onclick="location.href='technical-program.html';">
+                    <div class="track-card" onclick="location.href='technical-program.html';">
                         <i class="fa fa-leaf"></i>
-                        <h3>Track 9</h3>
-                        <p>Green & Sustainable</p>
+                        <h3>Green Sustainable</h3>
                     </div>
                 </div>
-                <h2 class="section-title"><i class="fa fa-handshake"></i>TRANSPARENCY STATEMENT FOR THE PROCEEDINGS</h2>
-                <div style="margin-top: 1rem;">
-                    <p> These proceedings are from the International Conference on Computing, Communication, and
-                        Sustainable Energy Technologies (I3CSET-2025), UP, India, organized by Galgotias College of
+
+                <div style="margin-top: 4rem;">
+                    <h2 class="section-title">TRANSPARENCY STATEMENT</h2>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">
+                        These proceedings are from the 2nd International Conference on Computing, Communication, and
+                        Energy Efficiency Technologies (I3CEET-2027), UP, India, organized by Galgotias College of
                         Engineering and Technology. Editorial decision making and oversight of peer review was conducted
-                        by:
-
-                        Ram Lal Yadava, Anil Kumar Sethi, and Amanpreet Singh Saini
-                        Galgotias College of Engineering and Technology, Knowledge Park II, Greater Noida, Uttar
-                        Pradesh, India
-
-                        Peer review was conducted by a committee of academics who jointly assessed each abstract/article
-                        and selected peer reviewers from the wider academic community/another process.
-
-                        Taylor & Francis played no part in the choice of editors or peer reviewers for these
-                        proceedings.
+                        by: Ram Lal Yadava, Anil Kumar Sethi, and Amanpreet Singh Saini. 
+                        Galgotias College of Engineering
+                        and Technology, Knowledge Park II, Greater Noida, Uttar Pradesh, India Peer review was conducted
+                        by a committee of academics who jointly assessed each abstract/article and selected peer
+                        reviewers from the wider academic community/another process. IEEE played no part in
+                        the choice of editors or peer reviewers for these proceedings.
+                    </p>
                 </div>
             </section>
         </main>
 
-        <!-- Right Column: Sidebar (Dates & Quick Links) -->
-        <aside class="sidebar">
+        <!-- Sidebar -->
+        <aside>
             <section class="section-card">
-                <h3 class="section-title" style="font-size: 1.25rem;"><i class="fa fa-calendar-day"></i> IMPORTANT DATES
-                </h3>
+                <h3 class="section-title" style="font-size: 1.5rem;">IMPORTANT DATES</h3>
                 <div id="dates-placeholder"></div>
             </section>
 
             <section class="section-card">
-                <h3 class="section-title" style="font-size: 1.25rem;"><i class="fa fa-link"></i> RESOURCES</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 1rem;"><a href="resources/call_for_papers.pdf"
-                            style="color: var(--text); text-decoration: none;"><i class="fa fa-file-pdf"
-                                style="color: var(--accent);"></i> Call for Papers</a></li>
-                    <li style="margin-bottom: 1rem;"><a href="resources/Submission_Format_Doc.zip"
-                            style="color: var(--text); text-decoration: none;"><i class="fa fa-file-code"
-                                style="color: var(--accent);"></i> Templates</a></li>
-                    <li style="margin-bottom: 1rem;"><a href="resources/copyright_form.docx"
-                            style="color: var(--text); text-decoration: none;"><i class="fa fa-copyright"
-                                style="color: var(--accent);"></i> Copyright Form</a></li>
-                    <li style="margin-top: 1.5rem; border-top: 1px solid var(--glass-border); padding-top: 1rem;">
-                        <a href="paper-sub-guidelines.html#resources"
-                            style="color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
-                            More Resources <i class="fa fa-arrow-right"></i>
+                <h3 class="section-title" style="font-size: 1.5rem;">RESOURCES</h3>
+                <ul class="footer-section" style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 1.5rem;">
+                        <a href="resources/call_for_papers.pdf"
+                            style="display: flex; align-items: center; gap: 1rem; color: #1e3a8a; font-weight: 600;">
+                            <i class="fa fa-file-pdf" style="font-size: 1.5rem; color: var(--accent);"></i> Call for
+                            Papers
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1.5rem;">
+                        <a href="resources/Submission_Format_Doc.zip"
+                            style="display: flex; align-items: center; gap: 1rem; color: #1e3a8a; font-weight: 600;">
+                            <i class="fa fa-file-code" style="font-size: 1.5rem; color: var(--accent);"></i> Templates
+                            (.zip)
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1.5rem;">
+                        <a href="resources/copyright_form.docx"
+                            style="display: flex; align-items: center; gap: 1rem; color: #1e3a8a; font-weight: 600;">
+                            <i class="fa fa-copyright" style="font-size: 1.5rem; color: var(--accent);"></i> Copyright
+                            Form
                         </a>
                     </li>
                 </ul>
+                <a href="paper-sub-guidelines.html#resources" class="btn btn-outline"
+                    style="width: 100%; border-radius: 8px;">Explore All Resources</a>
             </section>
         </aside>
 
     </div>
 
-    <!-- Full Width Gallery Section -->
+    <!-- Gallery Section -->
     <section class="full-width-gallery">
-        <div class="container mx-auto px-4">
-            <h2 class="section-title">
-                <pre>    </pre> <i class="fa fa-images"></i> CONFERENCE MEMORIES
-            </h2>
+        <div class="container">
+            <h2 class="section-title">CONFERENCE MEMORIES</h2>
         </div>
-        <div class="gallery-wrapper">
+        <div class="gallery-wrapper mt-8">
             <div class="gallery-track">
-                <!-- First Set -->
-                <div class="gallery-item"><img src="images/previmg/previmg1.jpeg" alt="Conf 1"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg2.jpeg" alt="Conf 2"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg3.jpeg" alt="Conf 3"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg4.jpeg" alt="Conf 4"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg5.jpeg" alt="Conf 5"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg6.jpeg" alt="Conf 6"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg7.jpeg" alt="Conf 7"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg8.jpeg" alt="Conf 8"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg9.jpeg" alt="Conf 9"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg10.jpeg" alt="Conf 10"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg11.jpeg" alt="Conf 11"></div>
-                <!-- Second Set (Duplicate for smooth loop) -->
-                <div class="gallery-item"><img src="images/previmg/previmg1.jpeg" alt="Conf 1"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg2.jpeg" alt="Conf 2"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg3.jpeg" alt="Conf 3"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg4.jpeg" alt="Conf 4"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg5.jpeg" alt="Conf 5"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg6.jpeg" alt="Conf 6"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg7.jpeg" alt="Conf 7"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg8.jpeg" alt="Conf 8"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg9.jpeg" alt="Conf 9"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg10.jpeg" alt="Conf 10"></div>
-                <div class="gallery-item"><img src="images/previmg/previmg11.jpeg" alt="Conf 11"></div>
+                <!-- Original Items -->
+                <div class="gallery-item"><img src="images/previmg/previmg1.jpeg" alt="G1"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg2.jpeg" alt="G2"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg3.jpeg" alt="G3"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg4.jpeg" alt="G4"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg5.jpeg" alt="G5"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg6.jpeg" alt="G6"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg7.jpeg" alt="G7"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg8.jpeg" alt="G8"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg9.jpeg" alt="G9"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg10.jpeg" alt="G10"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg11.jpeg" alt="G11"></div>
+                <!-- Duplicate for Loop -->
+                <div class="gallery-item"><img src="images/previmg/previmg1.jpeg" alt="G1"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg2.jpeg" alt="G2"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg3.jpeg" alt="G3"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg4.jpeg" alt="G4"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg5.jpeg" alt="G5"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg6.jpeg" alt="G6"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg7.jpeg" alt="G7"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg8.jpeg" alt="G8"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg9.jpeg" alt="G9"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg10.jpeg" alt="G10"></div>
+                <div class="gallery-item"><img src="images/previmg/previmg11.jpeg" alt="G11"></div>
             </div>
         </div>
     </section>
@@ -460,18 +283,6 @@
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
-    <script>
-        // Smooth scroll for nav
-        $(document).ready(function () {
-            // Ticker duplicate content for infinite loop if needed, 
-            // but the animation handles it. Simple hover pause:
-            $('#news-ticker-container').hover(function () {
-                $('.ticker-content').css('animation-play-state', 'paused');
-            }, function () {
-                $('.ticker-content').css('animation-play-state', 'running');
-            });
-        });
-    </script>
 </body>
 
 </html>

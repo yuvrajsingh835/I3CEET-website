@@ -4,24 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration | I3CSET-2026</title>
+    <title>Registration | I3CEET-2027</title>
 
     <!-- Meta SEO -->
-    <meta name="description" content="Registration information and fees for I3CSET-2026 conference.">
+    <meta name="description" content="Registration information and fees for I3CEET-2027 conference.">
 
-    <script>
-        if (localStorage.getItem('theme') === 'light') {
-            document.documentElement.classList.add('light-mode');
-            document.addEventListener('DOMContentLoaded', () => document.body.classList.add('light-mode'));
-        }
-    </script>
-    <script src="js/ticker-data.js" defer></script>
-    <script src="js/footer-data.js" defer></script>
-    <script src="js/dates-data.js" defer></script>
-    <script src="js/nav-data.js" defer></script>
-    <script src="js/modern.js" defer></script>
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
@@ -29,332 +18,229 @@
     <link rel="stylesheet" href="css/modern.css">
 
     <style>
-        .glass-effect {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        #news-ticker-container {
-            background: var(--primary);
-            color: var(--text);
-            padding: 8px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-            z-index: 1001;
-            border-bottom: 1px solid var(--glass-border);
-        }
-
-        .ticker-content {
-            display: inline-block;
-            padding-left: 100%;
-            animation: ticker 30s linear infinite;
-        }
-
-        .ticker-item {
-            display: inline-block;
-            margin-right: 50px;
-            font-weight: 500;
-        }
-
-        .ticker-item i {
-            color: var(--accent);
-            margin-right: 8px;
-        }
-
-        .ticker-item a {
-            color: var(--secondary);
-            text-decoration: none;
-        }
-
-        @keyframes ticker {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
         .page-header {
-            background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('images/hotel1-banner.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 4rem 2rem;
+            background-color: var(--section-bg);
+            padding: 4rem 0;
             text-align: center;
-            border-bottom: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--border);
         }
 
-        /* Modern Table Styling */
-        .modern-table-container {
+        .reg-hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            padding: 3rem;
+            border-radius: 1rem;
+            text-align: center;
+            border: 1px solid #bfdbfe;
+            margin-bottom: 4rem;
+        }
+
+        .reg-hero h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .table-responsive {
             overflow-x: auto;
             margin: 2rem 0;
-            border-radius: 12px;
-            border: 1px solid var(--glass-border);
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
         }
 
-        .modern-table {
+        .price-table {
             width: 100%;
             border-collapse: collapse;
-            background: var(--glass);
-            color: var(--text);
+            background: white;
         }
 
-        .modern-table th {
-            background: rgba(220, 38, 38, 0.2);
-            padding: 1rem;
+        .price-table th {
+            background-color: #f8fafc;
+            padding: 1.25rem;
             text-align: left;
-            font-weight: 600;
-            border-bottom: 2px solid var(--accent);
+            font-weight: 700;
+            color: #1e3a8a;
+            border-bottom: 2px solid #e2e8f0;
+            font-size: 0.85rem;
+            text-transform: uppercase;
         }
 
-        .modern-table td {
-            padding: 1rem;
-            border-bottom: 1px solid var(--glass-border);
-        }
-
-        .modern-table tr:hover {
-            background: rgba(var(--accent), 0.05);
-        }
-
-        .reg-highlight {
-            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(16, 185, 129, 0.1));
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid var(--accent);
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .reg-highlight h2 {
-            margin-bottom: 1rem;
+        .price-table td {
+            padding: 1.25rem;
+            border-bottom: 1px solid #f1f5f9;
             color: var(--text);
+            font-size: 0.95rem;
         }
 
-        .reg-highlight .btn-primary {
-            font-size: 1.2rem;
-            padding: 1rem 2.5rem;
+        .price-table tr:hover {
+            background-color: #f8fafc;
+        }
+
+        .payment-info {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-value {
+            font-weight: 600;
+            color: #1e3a8a;
         }
     </style>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/ticker-data.js" defer></script>
+    <script src="js/footer-data.js" defer></script>
+    <script src="js/dates-data.js" defer></script>
+    <script src="js/nav-data.js" defer></script>
+    <script src="js/modern.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Top News Ticker -->
     <div id="ticker-placeholder"></div>
+    <nav id="nav-placeholder" class="modern-nav"></nav>
 
-    <!-- Page Header -->
     <header class="page-header">
-        <div class="container mx-auto">
-            <h1 class="conference-title">Conference Registration</h1>
-            <p class="conference-subtitle">Join us at I3CSET-2026 in Greater Noida</p>
+        <div class="container">
+            <h1 class="conference-title">Registration</h1>
+            <p class="conference-subtitle">Join us at I3CEET-2027 in Greater Noida, India</p>
         </div>
     </header>
 
-    <!-- Sticky Navigation -->
-    <nav id="nav-placeholder" class="modern-nav glass-effect"></nav>
+    <div class="container py-16">
 
-    <!-- Main Content Area -->
-    <div class="main-content container mx-auto px-4 max-w-7xl">
+        <div class="reg-hero">
+            <h2>Registration is now OPEN!</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-muted);">Secure your spot at the conference as an author, presenter, or participant.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfmCKdDYz-o5ojV9B5pRZvOSagMq0hBARVetfRwpYs3bQ5c2Q/closedform" class="btn btn-primary btn-lg" target="_blank">Register Now</a>
+        </div>
 
-        <main class="content-area">
-            <section class="reg-highlight">
-                <h2>Registration is now OPEN!</h2>
-                <p style="margin-bottom: 2rem;">All attendees must register for the conference, whether as an author,
-                    presenter, or participant.</p>
-                <button class="btn-primary"
-                    onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfmCKdDYz-o5ojV9B5pRZvOSagMq0hBARVetfRwpYs3bQ5c2Q/closedform')">Click
-                    Here to
-                    Register</button>
-            </section>
+        <div class="main-content">
+            <main>
+                <section class="section-card">
+                    <h2 class="section-title">REGISTRATION RATES</h2>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">At least one author must register for each accepted paper to be included in the proceedings. One registration covers one paper.</p>
+                    
+                    <div class="table-wrapper">
+                        <table class="price-table">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Early Bird (India)</th>
+                                    <th>Regular (India)</th>
+                                    <th>International</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="font-weight: 700;">UG/PG Student</td>
+                                    <td>₹8500 INR</td>
+                                    <td>₹9000 INR</td>
+                                    <td>$200 USD</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 700;">Academia</td>
+                                    <td>₹9500 INR</td>
+                                    <td>₹10,000 INR</td>
+                                    <td>$250 USD</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 700;">Industry</td>
+                                    <td>₹9500 INR</td>
+                                    <td>₹10,000 INR</td>
+                                    <td>$300 USD</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 700;">Attendee</td>
+                                    <td>₹2500 INR</td>
+                                    <td>₹2500 INR</td>
+                                    <td>$50 USD</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-            <section class="section-card">
-                <h2 class="section-title"><i class="fa fa-info-circle"></i> General Information</h2>
-                <p>Registration is mandatory for all conference participants. A personal name badge will be provided to
-                    identify registered participants; these must be worn at all conference functions.
-                </p>
+                    <div style="background: #f8fafc; padding: 1.5rem; border-radius: 0.5rem; font-size: 0.9rem; color: var(--text-muted); border: 1px dashed #cbd5e1;">
+                        <p><strong>Additional Papers:</strong> 3rd Paper: ₹4,000 / $100 | 4th Paper: ₹5,000 / $120</p>
+                        <p style="margin-top: 0.5rem;"><strong>Extra Charges:</strong> Additional Pages: ₹1500 / $50 each | Additional Certificate: ₹300 / $25 each.</p>
+                    </div>
+                </section>
 
-                <h3 style="margin-top: 2rem; color: var(--text); display: flex; align-items: center; gap: 0.5rem;"><i
-                        class="fa fa-desktop" style="color:var(--accent)"></i> Registration Desk Schedule</h3>
-                <div class="modern-table-container">
-                    <table class="modern-table">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Desk Hours</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Wednesday, Sept 30</td>
-                                <td>9:30 a.m. - 1:00 p.m.</td>
-                            </tr>
-                            <tr>
-                                <td>Thursday, Oct 01</td>
-                                <td>10:00 a.m. - 12:00 p.m.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+                <section class="section-card">
+                    <h2 class="section-title">PAYMENT DETAILS</h2>
+                    <div class="payment-info">
+                        <p style="font-weight: 700; color: #1e3a8a; margin-bottom: 1.5rem;">Bank Transfer (NEFT/IMPS/Swift)</p>
+                        <div class="info-grid">
+                            <div>
+                                <div class="info-label">Account Name</div>
+                                <div class="info-value">Galgotias College of Engineering</div>
+                            </div>
+                            <div>
+                                <div class="info-label">Account Number</div>
+                                <div class="info-value">6420000100006852</div>
+                            </div>
+                            <div>
+                                <div class="info-label">Bank Name</div>
+                                <div class="info-value">Punjab National Bank</div>
+                            </div>
+                            <div>
+                                <div class="info-label">IFSC Code</div>
+                                <div class="info-value">PUNB0671700</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 2rem; padding: 1rem; background: #fffbeb; border: 1px solid #fde68a; border-radius: 0.5rem; font-size: 0.85rem; color: #92400e;">
+                            <i class="fa fa-info-circle"></i> Use <strong>Paper ID + Name</strong> (e.g., I3CEET001_Yuvraj) as the transaction remark.
+                        </div>
+                    </div>
+                </section>
+            </main>
 
-            <section class="section-card">
-                <h2 class="section-title"><i class="fa fa-tags"></i> Registration Rates</h2>
-                <p>At least one author must register for each accepted paper for it to be included in the final
-                    proceedings. Each
-                    registration covers only one paper. For additional papers by the same author, an extra fee applies.
-                </p>
-                <div class="modern-table-container">
-                    <table class="modern-table">
-                        <thead>
-                            <tr>
-                                <th>Category</th>
-                                <th>Early Bird (India)<br><span
-                                        style="font-size: 0.75rem; font-weight: 400; opacity: 0.8; font-style: italic;">Valid
-                                        till April 30, 2026</span></th>
-                                <th>Regular (India)<br><span
-                                        style="font-size: 0.75rem; font-weight: 400; opacity: 0.8; font-style: italic;">Valid
-                                        after April 30, 2026</span></th>
-                                <th>Early Bird (Intl.)<br><span
-                                        style="font-size: 0.75rem; font-weight: 400; opacity: 0.8; font-style: italic;">Valid
-                                        till April 30, 2026</span></th>
-                                <th>Regular (Intl.)<br><span
-                                        style="font-size: 0.75rem; font-weight: 400; opacity: 0.8; font-style: italic;">Valid
-                                        after April 30, 2026</span></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>UG/PG Student</td>
-                                <td>₹8500 INR</td>
-                                <td>₹9000 INR*</td>
-                                <td>$200 USD</td>
-                                <td>$210 USD*</td>
-                            </tr>
-                            <tr>
-                                <td>Academia</td>
-                                <td>₹9500 INR</td>
-                                <td>₹10,000 INR*</td>
-                                <td>$250 USD</td>
-                                <td>$260 USD*</td>
-                            </tr>
-                            <tr>
-                                <td>Industry</td>
-                                <td>₹9500 INR</td>
-                                <td>₹10,000 INR*</td>
-                                <td>$300 USD</td>
-                                <td>$310 USD*</td>
-                            </tr>
-                            <tr>
-                                <td>Attendee</td>
-                                <td>₹2500 INR</td>
-                                <td>₹2500 INR*</td>
-                                <td>$50 USD</td>
-                                <td>$60 USD*</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div style="display: grid; gap: 1rem; margin-top: 1rem;">
-                    <p><strong>Additional Third Paper (same author): ₹4,000 INR / $100 USD</strong></p>
-                    <p><strong>Additional Fourth Paper (same author): ₹5,000 INR / $120 USD</strong></p>
-                    <p><strong>Additional Pages:</strong> ₹1500 INR / $50 USD each.</p>
-                    <p><strong>Additional Certificate:</strong> ₹300 INR / $25 USD each.</p>
-                    <p>* Fee includes Late Submission Charges.</p>
-                </div>
-            </section>
-
-
-        </main>
-
-        <aside class="sidebar">
-            <section class="section-card">
-                <h3 class="section-title" style="font-size: 1.25rem;"><i class="fa fa-calendar-day"></i> KEY DATES</h3>
-                <div id="dates-placeholder"></div>
-            </section>
-
-            <section class="section-card">
-                <h2 class="section-title" style="font-size: 1.25rem;"><i class="fa fa-gift"></i> BENEFITS</h2>
-                <div style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
-                    <p style="margin-bottom: 1rem;">Registered participants will receive a personal name badge and have
-                        access to:</p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.75rem; display: flex; align-items: start; gap: 0.75rem;">
-                            <i class="fa fa-microphone" style="color:var(--accent); margin-top: 3px;"></i>
-                            Keynote and technical sessions
-                        </li>
-                        <li style="margin-bottom: 0.75rem; display: flex; align-items: start; gap: 0.75rem;">
-                            <i class="fa fa-briefcase" style="color:var(--accent); margin-top: 3px;"></i>
-                            Conference kit and ID badge
-                        </li>
-                        <li style="margin-bottom: 0.75rem; display: flex; align-items: start; gap: 0.75rem;">
-                            <i class="fa fa-coffee" style="color:var(--accent); margin-top: 3px;"></i>
-                            Coffee breaks and lunch
-                        </li>
-                        <li style="margin-bottom: 0.75rem; display: flex; align-items: start; gap: 0.75rem;">
-                            <i class="fa fa-certificate" style="color:var(--accent); margin-top: 3px;"></i>
-                            Certificate of participation
-                        </li>
+            <aside>
+                <section class="section-card">
+                    <h3 class="section-title" style="font-size: 1.5rem;">BENEFITS</h3>
+                    <ul class="author-list" style="font-size: 0.9rem;">
+                        <li style="margin-bottom: 0.75rem;">Access to all technical sessions</li>
+                        <li style="margin-bottom: 0.75rem;">Keynote & Plenary talks</li>
+                        <li style="margin-bottom: 0.75rem;">Conference kit & ID badge</li>
+                        <li style="margin-bottom: 0.75rem;">Certificates of Participation</li>
+                        <li>Working Lunch & High Tea</li>
                     </ul>
-                </div>
-            </section>
+                </section>
 
-            <section class="section-card">
-                <h2 class="section-title" style="font-size: 1.25rem;"><i class="fa fa-university"></i> PAYMENT DETAILS
-                </h2>
-                <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-                    <p style="margin-bottom: 0.75rem;"><strong style="color: var(--text);">Bank Transfer
-                            Information:</strong></p>
-                    <div style="display: grid; gap: 0.5rem; border-left: 2px solid var(--accent); padding-left: 1rem;">
-                        <p><strong>A/C Name:</strong><br>GALGOTIAS COLLEGE OF ENGINEERING AND TECHNOLOGY</p>
-                        <p><strong>A/C No.:</strong> 6420000100006852</p>
-                        <p><strong>A/C Type:</strong> Saving Bank Account</p>
-                        <p><strong>Payee Bank:</strong> Punjab National Bank</p>
-                        <p><strong>Branch:</strong> Sector-63 GAUTAM BUDDHA NAGAR-201301, UP</p>
-                        <p><strong>IFSC Code:</strong> PUNB0671700</p>
-                        <p><strong>SWIFT Code:</strong> PUNBINBBMSN</p>
-                        <p><strong>MICR Code:</strong> 110024298</p>
-                    </div>
-                    <div
-                        style="margin-top: 1rem; padding: 0.75rem; background: rgba(220, 38, 38, 0.1); border-radius: 8px; border: 1px solid var(--accent);">
-                        <p style="margin:0; font-weight: 700; color: var(--accent);"><i class="fa fa-info-circle"></i>
-                            Payment Reference:</p>
-                        <p style="margin:0; font-size: 0.8rem;">Use <strong>Paper ID + Name</strong><br>(e.g.,
-                            I3CSET001_Yuvraj)</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-card">
-                <h3 class="section-title" style="font-size: 1.25rem;"><i class="fa fa-shield-halved"></i> REFUND POLICY
-                </h3>
-                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-                    Registration fees are <strong>non-refundable</strong> under any circumstances. Authors are advised
-                    to proceed with payment only after receiving the acceptance notification and being fully satisfied
-                    with the conference terms, schedule, and publication process.
-                </p>
-            </section>
-        </aside>
+                <section class="section-card">
+                    <h3 class="section-title" style="font-size: 1.5rem;">REFUND POLICY</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                        Registration fees are <strong>non-refundable</strong>. Please ensure you have received acceptance and are satisfied with the terms before paying.
+                    </p>
+                </section>
+            </aside>
+        </div>
 
     </div>
 
-    <!-- Footer -->
     <div id="footer-placeholder"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('#news-ticker-container').hover(function () {
-                $('.ticker-content').css('animation-play-state', 'paused');
-            }, function () {
-                $('.ticker-content').css('animation-play-state', 'running');
-            });
-        });
-    </script>
 </body>
 
 </html>

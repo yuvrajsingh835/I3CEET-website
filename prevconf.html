@@ -4,27 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Previous Conference | I3CSET-2026</title>
+    <title>Previous Conference | I3CEET-2027</title>
 
     <!-- Meta SEO -->
-    <meta name="keywords" content="I3CSET-2026, Previous Conference, I3CEET 2024, GCET, Conference History">
+    <meta name="keywords" content="I3CEET-2027, Previous Conference, I3CEET 2024, GCET, Conference History">
     <meta name="description" content="View the highlights and statistics of our previous conference editions.">
 
-    <script>
-        if (localStorage.getItem('theme') === 'light') {
-            document.documentElement.classList.add('light-mode');
-            document.addEventListener('DOMContentLoaded', () => document.body.classList.add('light-mode'));
-        }
-    </script>
-    <script src="js/ticker-data.js" defer></script>
-    <script src="js/footer-data.js" defer></script>
-    <script src="js/dates-data.js" defer></script>
-    <script src="js/nav-data.js" defer></script>
-    <script src="js/modern.js" defer></script>
-    <script src="js/sponsor-data.js" defer></script>
-
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
@@ -32,647 +19,201 @@
     <link rel="stylesheet" href="css/modern.css">
 
     <style>
-        .glass-effect {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .prev-header {
-            background: linear-gradient(rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.9)), url('images/hotel1-banner.jpg    ');
-            background-size: cover;
-            background-position: center;
-            padding: 5rem 2rem;
-            text-align: center;
-            border-bottom: 1px solid var(--glass-border);
-        }
-
-
-
         .page-header {
-            background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('images/hotel1-banner.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 4rem 2rem;
+            background-color: var(--section-bg);
+            padding: 4rem 0;
             text-align: center;
-            border-bottom: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--border);
         }
 
-        /* Highlights Grid */
-        .highlight-grid {
+        .history-item {
+            margin-bottom: 4rem;
+        }
+
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1.5rem;
-            margin: 3rem 0;
+            margin: 2rem 0;
         }
 
-        .highlight-item {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            border-radius: 16px;
+        .stat-card {
+            background-color: white;
             padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border);
             text-align: center;
             transition: var(--transition);
         }
 
-        .highlight-item:hover {
+        .stat-card:hover {
             border-color: var(--accent);
             transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
         }
 
-        .highlight-number {
-            font-size: 2.5rem;
-            font-weight: 700;
+        .stat-num {
+            font-size: 2.25rem;
+            font-weight: 800;
             color: var(--accent);
             margin-bottom: 0.5rem;
         }
 
-        .highlight-label {
+        .stat-label {
+            font-size: 0.75rem;
+            font-weight: 700;
             color: var(--text-muted);
             text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
+            letter-spacing: 0.05em;
         }
 
-        /* Guests List */
-        .guest-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 2rem;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 12px;
-            overflow: hidden;
+        .history-summary {
+            padding: 2rem;
+            background: #f8fafc;
+            border-radius: 1rem;
+            border-left: 4px solid var(--accent);
+            margin-bottom: 2rem;
+            line-height: 1.8;
         }
 
-        .guest-table th,
-        .guest-table td {
-            padding: 1rem 1.5rem;
-            text-align: left;
-            border-bottom: 1px solid var(--glass-border);
+        .guest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
-        .guest-table th {
-            background: rgba(220, 38, 38, 0.1);
-            color: white;
-            font-weight: 600;
-        }
-
-        .guest-table tr:last-child td {
-            border-bottom: none;
+        .guest-item {
+            padding: 1rem;
+            border-bottom: 1px solid #f1f5f9;
         }
 
         .guest-name {
-            color: var(--secondary);
-            font-weight: 600;
-        }
-
-        /* History Accordion */
-        .history-accordion {
-            margin-top: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .history-item {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .history-item summary {
-            padding: 1.5rem 2rem;
-            cursor: pointer;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--text);
-            background: rgba(255, 255, 255, 0.02);
-            transition: var(--transition);
-        }
-
-        .history-item summary:hover {
-            background: rgba(220, 38, 38, 0.05);
-        }
-
-        .history-item summary::after {
-            content: '\f078';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
+            color: #1e3a8a;
             font-size: 1rem;
-            color: var(--accent);
-            transition: transform 0.3s ease;
         }
 
-        .history-item[open] summary::after {
-            transform: rotate(180deg);
-        }
-
-        .history-content {
-            padding: 2rem;
-            border-top: 1px solid var(--glass-border);
-            animation: slideDown 0.4s ease-out;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .stats-summary {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-
-        .stat-badge {
-            background: rgba(220, 38, 38, 0.1);
-            border: 1px solid var(--accent);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
+        .guest-role {
             font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--accent);
-        }
-
-        .gallery-container {
-            width: 100%;
-            overflow: hidden;
-            margin-top: 2rem;
-            position: relative;
-            background: rgba(0, 0, 0, 0.02);
-            padding: 1rem 0;
-            border-radius: 12px;
-        }
-
-        .gallery-track {
-            display: flex;
-            width: calc(300px * 22);
-            /* 11 images duplicated */
-            animation: scroll-gallery 30s linear infinite;
-        }
-
-        .gallery-track:hover {
-            animation-play-state: paused;
-        }
-
-        .gallery-item {
-            width: 300px;
-            height: 200px;
-            padding: 0 0.5rem;
-            flex-shrink: 0;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 12px;
-            transition: all 0.4s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-        }
-
-        .gallery-item img:hover {
-            transform: scale(1.15);
-            /* Enhances about 50px of visual space */
-            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4);
-            z-index: 10;
-        }
-
-        @keyframes scroll-gallery {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(calc(-300px * 11));
-            }
-        }
-
-        /* Full Width Layout Override */
-
-        /* Full Width Layout Override */
-        .main-content {
-            display: block !important;
-            max-width: 1400px;
-            margin: 4rem auto;
-        }
-
-        .content-area {
-            width: 100%;
+            color: var(--text-muted);
         }
     </style>
 
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/ticker-data.js" defer></script>
+    <script src="js/footer-data.js" defer></script>
+    <script src="js/dates-data.js" defer></script>
+    <script src="js/nav-data.js" defer></script>
+    <script src="js/modern.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Top News Ticker -->
     <div id="ticker-placeholder"></div>
+    <nav id="nav-placeholder" class="modern-nav"></nav>
 
-    <!-- Page Header -->
-    <header class="prev-header">
-        <div class="container mx-auto">
-            <h1 class="conference-title">Previous Conference</h1>
-            <p class="conference-subtitle">Honoring a Tradition of Excellence</p>
+    <header class="page-header">
+        <div class="container">
+            <h1 class="conference-title">Conference History</h1>
+            <p class="conference-subtitle">Honoring a tradition of academic excellence and innovation at GCET</p>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav id="nav-placeholder" class="modern-nav glass-effect"></nav>
+    <div class="container py-16">
+        
+        <!-- I3CSET 2025 -->
+        <section class="history-item">
+            <h2 class="section-title">I3CSET 2025</h2>
+            <div class="history-summary">
+                I3CSET-2025 was a landmark event, bringing together global experts to discuss the future of AI, networking, and green energy. Sponsored by <strong>IEEE</strong>, it set high standards for peer review and academic transparency.
+            </div>
 
-    <!-- Main Content Area -->
-    <div class="main-content container mx-auto px-4 max-w-7xl">
-
-        <main class="content-area">
-
-            <section class="section-card">
-                <h2 class="section-title welcome-card"><i class="fa fa-history"></i> CONFERENCE HISTORY</h2>
-                <p style="color: var(--text-muted); margin-bottom: 2rem;">Explore the legacy and achievements of our
-                    past conference editions at GCET.</p>
-
-                <div class="history-accordion">
-
-                    <!-- 1st Conference: I3CEET 2024 -->
-                    <details class="history-item" open>
-                        <summary>2024: International Conference on Communication, Computing, and Energy
-                            Efficiency Technologies (I3CEET 2024)</summary>
-                        <div class="history-content">
-                            <h3 style="color: var(--accent); margin-bottom: 1rem;">International Conference on
-                                Communication, Computing, and Energy Efficiency Technologies</h3>
-                            <div class="highlight-box">
-                                <p style="font-size: 0.95rem; line-height: 1.8;">
-                                    The International Conference on Communication, Computing, and Energy Efficiency
-                                    Technologies (I3CEET) 2024, held from September 20-21, 2024, at ECE Department,
-                                    Galgotias College of Engineering & Technology in Greater Noida, Uttar Pradesh, was a
-                                    resounding success!
-                                    The event, conducted in a hybrid mode, brought together a global community of
-                                    researchers, academics, and industry professionals. The conference provided a
-                                    dynamic platform for sharing cutting-edge research, fostering collaborations, and
-                                    advancing knowledge across multiple disciplines.
-                                </p>
-                            </div>
-
-                            <h4 style="margin: 2rem 0 1rem;"><i class="fa fa-chart-line"></i> Paper Statistics – I3CEET
-                                2024</h4>
-                            <div class="highlight-grid">
-                                <div class="highlight-item">
-                                    <div class="highlight-number">1199</div>
-                                    <div class="highlight-label">Total Submissions</div>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-number">348</div>
-                                    <div class="highlight-label">Accepted Papers</div>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-number">1199</div>
-                                    <div class="highlight-label">Registered Papers</div>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-number">329</div>
-                                    <div class="highlight-label">Presented Papers</div>
-                                </div>
-                            </div>
-
-                            <h4 style="margin: 3rem 0 1rem;"><i class="fa fa-user-tie"></i> Chief Guests</h4>
-                            <div class="highlight-grid"
-                                style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. S.N. Singh</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Chief
-                                        Guest | Director, ABV-IIIT Gwalior, MP</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Prof. Ashutosh Kr. Singh</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Guest
-                                        of Honour | Professor, Dept. of Electrical Engineering, MNNIT Allahabad</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Prof. Satish Kr. Singh</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Guest
-                                        of Honour | Associate Professor, IIIT Allahabad</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Prabhakar Tiwari</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Observer | Jhalwa, DevPrayagraj (UP), India</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Avadhesh Kumar</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Observer | Associate Professor, Dept. of Electrical Engineering, MMMUT Gorakhpur
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h4 style="margin: 3rem 0 1rem;"><i class="fa fa-microphone"></i> Keynote Speakers</h4>
-                            <div class="highlight-grid"
-                                style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Chandresh Singh</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Auckland University of Technology, South Africa</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Ajay Sharma</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Marie
-                                        Curie Foundation Scholar, Malta</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Satyaprakash</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Reliability Manager, Vins Inc., Austin, Texas, USA</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Siti Nurni Huda Mohdhamid</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        University Malaysia Kelantan Jeli</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Mr. Ambarees Aladyan</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Compunet, Inc., Texas, USA</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Rudiger Franke</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">CTO,
-                                        Pepperl+Fuchs, Germany</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Ms. Arpita Soni</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Senior Technical Program Manager, Infosys, USA</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Pehchu Rai Orelha</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Reliance Jio Platforms Ltd., India</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Suresh Singh</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        National Institute of Technology, Srinagar</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. M. Junaid Ahmest</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Aligarh Muslim University, Aligarh</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. K. M. Mesharam</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Professor, Dept. of ECE, IIT(BHU)</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Priyush Chaudhary</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        General Manager, ONGC Green Limited, Noida</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Tanvir Ahmad</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Jamia
-                                        Millia Islamia, New Delhi</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Venkish Kumar Ray</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Gautam Buddha University, Greater Noida</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Mr. Vibbor Bhatnagar</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Presales Technical Architect, HCLTECH, Noida</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Ms. Sukanya Komatam</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Senior Manager, Volta Partners, Texas, USA</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Rajeev Singh Yaduvanshi</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Netaji Subhas University of Technology, New Delhi</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Gajendra Pradhan</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Associate Professor, NIT Patna</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Sanjay Kumar Singh</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Director, MIET, Meerut</div>
-                                </div>
-                            </div>
-
-                            <h4 style="margin: 3rem 0 1rem;"><i class="fa fa-images"></i> Glimpses of International
-                                Conference on
-                                Communication, Computing, and Energy Efficiency Technologies - 2024</h4>
-                            <div class="gallery-container">
-                                <div class="gallery-track">
-                                    <!-- Original 11 -->
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg1.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg2.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg3.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg4.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg5.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg6.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg7.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg8.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg9.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg10.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg11.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <!-- Duplicates for seamless loop -->
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg1.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg2.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg3.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg4.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg5.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg6.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg7.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg8.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg9.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg10.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                    <div class="gallery-item"><img src="images/prevconf1/previmg11.jpeg"
-                                            alt="I3CEET 2024"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </details>
-
-                    <!-- 2nd Conference: I3CSET 2025 -->
-                    <details class="history-item">
-                        <summary>2025: International Conference on
-                            Computing, Communication, and Sustainable Energy Technologies (I3CSET 2025)</summary>
-                        <div class="history-content">
-                            <h3 style="color: var(--accent); margin-bottom: 1rem;">International Conference on
-                                Computing, Communication, and Sustainable Energy Technologies</h3>
-                            <div class="highlight-box">
-                                <p style="font-size: 0.95rem; line-height: 1.8;">
-                                    I3CSET-2025 brought together top researchers, scientists, and engineers from across
-                                    the world to share their latest studies and experiences. Hosted by Galgotias
-                                    College, this major international event focused on the intersection of AI,
-                                    networking, and green energy solutions. Sponsored by **Taylor & Francis Group**, the
-                                    conference underscored its commitment to academic transparency and high editorial
-                                    standards.
-                                </p>
-                            </div>
-
-                            <h4 style="margin: 2rem 0 1rem;"><i class="fa fa-chart-line"></i> Paper Statistics – I3CSET
-                                2025</h4>
-                            <div class="highlight-grid">
-                                <div class="highlight-item">
-                                    <div class="highlight-number">734</div>
-                                    <div class="highlight-label">Total Submissions</div>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-number">246</div>
-                                    <div class="highlight-label">Accepted Papers</div>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-number">197</div>
-                                    <div class="highlight-label">Registered Papers</div>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-number">164</div>
-                                    <div class="highlight-label">Presented Papers</div>
-                                </div>
-                            </div>
-
-                            <h4 style="margin: 2rem 0 1rem;"><i class="fa fa-user-graduate"></i> Distinguished Speakers
-                                (2025)</h4>
-                            <div class="highlight-grid"
-                                style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Satish Kabade</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">AI
-                                        Leader & Pension Tech Specialist</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Dr. Kelvin Anoh</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        University of Chichester, United Kingdom</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Rakesh Charla</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Senior Software Engineer, Microsoft Security</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Sathish Krishna Anumula</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Digital Transformation Architect, Siemens/IBM Alumni</div>
-                                </div>
-                                <div class="highlight-item" style="padding: 1.5rem; text-align: left;">
-                                    <div class="guest-name">Ajit Sahu</div>
-                                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
-                                        Director of Engineering, Data Safeguard Inc.</div>
-                                </div>
-                            </div>
-
-                            <h4 style="margin: 3rem 0 1rem;"><i class="fa fa-camera-retro"></i> Glimpses of I3CSET 2025
-                            </h4>
-                            <div class="gallery-container">
-                                <div class="gallery-track">
-                                    <!-- Original 11 -->
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg1.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg2.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg3.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg4.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg5.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg6.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg7.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg8.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg9.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg10.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg11.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <!-- Duplicates for seamless loop -->
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg1.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg2.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg3.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg4.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg5.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg6.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg7.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg8.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg9.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg10.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                    <div class="gallery-item"><img src="images/prevconf2/previmg11.jpeg"
-                                            alt="I3CSET 2025"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </details>
-
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-num">734</div>
+                    <div class="stat-label">Submissions</div>
                 </div>
-            </section>
+                <div class="stat-card">
+                    <div class="stat-num">246</div>
+                    <div class="stat-label">Accepted</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">197</div>
+                    <div class="stat-label">Registered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">164</div>
+                    <div class="stat-label">Presented</div>
+                </div>
+            </div>
 
+            <h3 style="color: #1e3a8a; font-weight: 800; font-size: 1.25rem; margin-top: 3rem;">Distinguished Speakers (2025)</h3>
+            <div class="guest-grid">
+                <div class="guest-item">
+                    <div class="guest-name">Satish Kabade</div>
+                    <div class="guest-role">AI Leader & Pension Tech Specialist</div>
+                </div>
+                <div class="guest-item">
+                    <div class="guest-name">Dr. Kelvin Anoh</div>
+                    <div class="guest-role">University of Chichester, UK</div>
+                </div>
+                <div class="guest-item">
+                    <div class="guest-name">Rakesh Charla</div>
+                    <div class="guest-role">Senior Software Engineer, Microsoft Security</div>
+                </div>
+                <div class="guest-item">
+                    <div class="guest-name">Ajit Sahu</div>
+                    <div class="guest-role">Director of Engineering, Data Safeguard Inc.</div>
+                </div>
+            </div>
+        </section>
 
-        </main>
+        <!-- I3CEET 2024 -->
+        <section class="history-item">
+            <hr style="border: 0; border-top: 1px solid #e2e8f0; margin-bottom: 5rem;">
+            <h2 class="section-title">I3CEET 2024</h2>
+            <div class="history-summary" style="border-left-color: #fbbf24;">
+                The inaugural 2024 edition was a resounding success, conducted in hybrid mode. It provided a dynamic platform for researchers to collaborate across multiple disciplines in communication and energy technologies.
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-num">1199</div>
+                    <div class="stat-label">Submissions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">348</div>
+                    <div class="stat-label">Accepted</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">329</div>
+                    <div class="stat-label">Presented</div>
+                </div>
+            </div>
+
+            <h3 style="color: #1e3a8a; font-weight: 800; font-size: 1.25rem; margin-top: 3rem;">Guests of Honour (2024)</h3>
+            <div class="guest-grid">
+                <div class="guest-item">
+                    <div class="guest-name">Dr. S.N. Singh</div>
+                    <div class="guest-role">Director, ABV-IIIT Gwalior</div>
+                </div>
+                <div class="guest-item">
+                    <div class="guest-name">Prof. Ashutosh Kr. Singh</div>
+                    <div class="guest-role">Professor, MNNIT Allahabad</div>
+                </div>
+                <div class="guest-item">
+                    <div class="guest-name">Prof. Satish Kr. Singh</div>
+                    <div class="guest-role">Associate Professor, IIIT Allahabad</div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
-
-    <!-- Footer -->
     <div id="footer-placeholder"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
-
 
 </html>
