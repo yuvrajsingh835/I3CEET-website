@@ -14,7 +14,7 @@ const datesHTML = `
     </div>
     <div class="date-card">
         <span class="label"><i class="fa fa-file-upload"></i> Final Paper Submission</span>
-        <span class="value">Feb 28, 2026</span>
+        <span class="value">Feb 28, 2027</span>
     </div>
     <div class="date-card">
         <span class="label"><i class="fa fa-calendar-check"></i> Conference</span>

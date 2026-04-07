@@ -1,33 +1,47 @@
-# I3CSET-2026: International Conference on Innovations in Computing
+# I3CEET-2027: 2nd International Conference on Computing, Communication and Energy Efficiency Technologies
 
-Welcome to the official repository for the **I3CSET-2026** website. This project serves as the digital hub for the International Conference on Innovations in Computing, Communication, Electrical, and Electronic Technology, providing delegates, speakers, and sponsors with all essential conference details.
+Welcome to the official repository for the **I3CEET-2027** conference website. This project serves as the digital hub for the 2nd International Conference on Computing, Communication and Energy Efficiency Technologies, organized by **Galgotias College of Engineering and Technology (GCET)**, Greater Noida, India.
 
-## 🚀 Presentation & Design
-The website is designed with a **premium, glassmorphism-inspired aesthetic**, focusing on clean typography, vibrant red accents, and smooth transitions. It is fully responsive and optimized for both desktop and mobile devices.
-
-### Key Features:
-- **Interactive Conference History**: Sliding image galleries and accordion-style details from past editions (2024, 2025).
-- **Dynamic Content System**: Navigation menus, technical programs, and news tickers are managed via JavaScript for easy updates.
-- **Modern Sponsorship Portal**: A structured 3-2 grid layout for partnership tiers, providing high visibility for Platinum, Gold, Silver, and Bronze sponsors.
-- **Themed UI**: Built-in support for light/dark mode persistence via localStorage.
-- **Fast Loading**: Optimized local assets and CDN-hosted icons for rapid performance.
-
-## 🛠️ Tech Stack
-- **Frontend**: Semantic HTML5, Vanilla CSS3 (Custom Variables/Glassmorphism).
-- **Interactivity**: Vanilla JavaScript (ES6+), jQuery (placeholder/external scripts).
-- **Assets**: Font Awesome (Icons), Google Fonts (Outfit, Inter).
-
-## 📂 Project Structure
-- `/css`: Core styling including the modern layout engine (`modern.css`).
-- `/js`: Configuration files for navigation, tickers, and dates.
-- `/images`: High-resolution banners and assets for galleries.
-- `/prevconf.html`: Dedicated historical conference database.
-- `/sponsors.html`: Partner and technical sponsorship details.
-
-## 🌐 Getting Started
-To view the site locally:
-1. Clone this repository.
-2. Open `index.html` in any modern web browser.
+The website provides a premium, IEEE-style digital experience for delegates, speakers, and authors, featuring real-time updates and a modern architectural design.
 
 ---
-© 2026 I3CSET Organizing Committee. All rights reserved.
+
+## ✨ Features & Design Philosophy
+
+The website is engineered with a **premium, state-of-the-art aesthetic**, prioritizing high readability and academic professionalism. 
+
+- **IEEE-Style Design**: Clean layouts, professional scales, and a focus on essential information (Call for Papers, Submission, Registration).
+- **Dynamic Content Architecture**:
+  - **Modular Navigation**: Centralized in `js/nav-data.js` for site-wide consistency.
+  - **Interactive News Ticker**: Real-time announcements managed via `js/ticker-data.js`.
+  - **Automated Dates Management**: Deadlines and milestones updated through `js/dates-data.js`.
+- **Author-Centric Resources**: Dedicated sections for paper submission guidelines, CMT portal links, and downloadable IEEE templates.
+- **Visual Archives**: A high-performance gallery track showcasing "Conference Memories" from previous editions.
+- **Mobile-First Responsiveness**: Tailored breakpoints for seamless access on tablets and smartphones using a modern CSS Grid system.
+
+## 🛠️ Technical Stack
+
+- **Foundational**: Semantic HTML5 & Modern CSS3 (Vanilla).
+- **Interactivity**: Vanilla JavaScript (ES6+) for modular injection and UI logic.
+- **Fonts & Identity**: Google Fonts (Inter) and Font Awesome 6 (Icons).
+- **Architecture**: Decoupled data-from-design pattern using asynchronous placeholder injection.
+
+## 📂 Project Structure
+
+- `index.html`: Main landing page with hero branding and conference highlights.
+- `/css`: Core styling system including `modern.css` and `reset.css`.
+- `/js`: Configuration logic for dynamic components (Nav, Footer, Dates, Ticker).
+- `/resources`: Downloadable assets including Paper Templates, Copyright Forms, and Call for Papers (PDF).
+- `/images`: High-resolution logos, organizing committee profiles, and event archives.
+- `registration.html`, `authors.html`, `committee.html`: Specialized sub-pages for specific conference tracks.
+
+## 🌐 Quick Start & Maintenance
+
+To run the project locally:
+1. Clone the repository: `git clone https://github.com/yuvrajsingh835/I3CEET-website.git`
+2. Open `index.html` in any modern web browser.
+
+**Pro-Tip for Organizers:** To update the conference schedule or breaking news, focus exclusively on the files inside the `/js` directory. Changes made there will propagate across all pages automatically.
+
+---
+© 2027 I3CEET Organizing Committee | Galgotias College of Engineering and Technology (GCET). All rights reserved.

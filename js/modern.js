@@ -1,14 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const navLinks = document.getElementById('nav-links');
-    const navOverlay = document.getElementById('nav-overlay');
+    // Scroll logic for modern navbar shadow (already handled in shared styles)
 
-    if (mobileMenuToggle && navLinks) {
-        mobileMenuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('mobile-active');
-            mobileMenuToggle.classList.toggle('active');
-        });
-    }
 
     // Scroll progress bar
     const navbar = document.querySelector('.modern-nav');
@@ -21,4 +13,23 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.style.background = 'white';
         }
     });
+
+    // Back to Top logic
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });

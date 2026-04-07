@@ -19,7 +19,7 @@ const navHTML = `
         <li><a href="paper-sub-guidelines.html" id="nav-submission">Submission</a></li>
         <li><a href="authors.html" id="nav-authors">Authors</a></li>
         <li><a href="registration.html" id="nav-registration">Registration</a></li>
-        <li><a href="committe.html" id="nav-committee">Committee</a></li>
+        <li><a href="committee.html" id="nav-committee">Committee</a></li>
         <li><a href="sponsors.html" id="nav-sponsors">Sponsors</a></li>
         <li><a href="prevconf.html" id="nav-prev">History</a></li>
     </ul>
@@ -46,7 +46,7 @@ function injectNav() {
             "paper-sub-guidelines.html": "nav-submission",
             "authors.html": "nav-authors",
             "registration.html": "nav-registration",
-            "committe.html": "nav-committee",
+            "committee.html": "nav-committee",
             "sponsors.html": "nav-sponsors",
             "prevconf.html": "nav-prev"
         };
