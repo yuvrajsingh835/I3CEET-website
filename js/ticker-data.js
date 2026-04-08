@@ -1,10 +1,11 @@
 const tickerHTML = `
 <div id="news-ticker-container">
     <div class="ticker-content" id="ticker-content">
-        <span class="ticker-item"><i class="fa fa-bullhorn"></i> Conference registration is now <a
-                href="registration.html">OPEN!! Click here.</a></span>
+        <span class="ticker-item"><i class="fa fa-bullhorn"></i> Conference registration is now OPEN!!<a
+                href="registration.html"> Click here.</a></span>
         <span class="ticker-item"><i class="fa fa-calendar-check"></i> Submission deadline is approaching. <a
                 href="paper-sub-guidelines.html">Submit now.</a></span>
+        <span class="ticker-item"><i class="fa fa-calendar-check"></i> Early Bird discount of ₹1000 INR / $50 USD for all, valid till December 31, 2026</span>
     </div>
 </div>`;
 

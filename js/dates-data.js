@@ -13,6 +13,10 @@ const datesHTML = `
         <span class="value" style="font-weight: 700; color: #1e3a8a;">Dec 01, 2026</span>
     </div>
     <div class="date-card" style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.8rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.4rem;">
+        <span class="label"><i class="fa fa-user-check" style="width: 14px;"></i> Registration Ends:</span>
+        <span class="value" style="font-weight: 700; color: #1e3a8a;">Jan 31, 2027</span>
+    </div>
+    <div class="date-card" style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.8rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.4rem;">
         <span class="label"><i class="fa fa-file-upload" style="width: 14px;"></i> Final Paper:</span>
         <span class="value" style="font-weight: 700; color: #1e3a8a;">Feb 28, 2027</span>
     </div>
